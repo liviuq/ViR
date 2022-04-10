@@ -14,11 +14,6 @@ header{
     width: 90%;
     margin: 15px auto;
 }
-.upload{
-    width: 34px;
-    border-radius: 30px;
-    margin-left: 30px;
-}
 .logo{
     width: 100px;
     cursor: pointer;
@@ -36,9 +31,7 @@ header{
 .toggle-button:hover{
     background: linear-gradient(to right,#0231ff9a,#5817d14f );
 }
-.upload:hover{
-    background: linear-gradient(to right,#0231ff9a,#5817d14f );
-}
+
 #search{
     margin-left: 40px;
 }
@@ -64,6 +57,33 @@ header{
     outline: 0;
     background-color: #244cff34;
   }
+  .button-box{
+      display: flex;
+  }
+  .dropdown.active > .toggle-button, .toggle-button:hover{
+    background: linear-gradient(to right,#0231ff9a,#5817d14f )
+  }
   .search:hover, .search:focus {
     background: linear-gradient(to right,#0231ff9a,#5817d14f );
+  }
+  .dropdown{
+      position: relative;
+  }
+  .dropdown-menu{
+      position: absolute;
+      left: 0;
+      top:calc(100%+25rem);
+      background-color: white;
+      padding: .75rem;
+      border-radius: .25rem;
+      box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 150ms ease-in-out, transform 150 ease-in-out;
+      pointer-events: none;
+  }
+  .dropdown.active > .toggle-button + .dropdown-menu{
+      opacity: 1;
+      transform: translateY(15px);
+      pointer-events: auto;
   }

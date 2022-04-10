@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <title>Main Page</title>
     <link rel="stylesheet" href="sass/ViR_page2.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <img class="logo" src="img/test_icon.png" alt="logo">
         <div class="button-box">
-            <div id="btn"></div>
-            <button type="button" class="toggle-button" >Username</button>
-            <button type="button" class="toggle-button" >Categories</button>
+             <div class="dropdown" data-dropdown>
+                <button type="button" class="toggle-button" data-dropdown-button>Categories</button>
+                <div class="dropdown-menu">
+                    Dropdown content 
+                </div>
+             </div>
+            <button type="button" class="toggle-button" >About Us</button>
+            <button type="button" class="toggle-button" >Contact</button>
         </div>
-        <img class="upload" src="img/upload_icon.png" alt="upload">
         <div class="wrapper">
             <img class="search-icon" src="img/search_icon.png" alt="search"/>
             <input class="search" placeholder="Search" type="text" >
