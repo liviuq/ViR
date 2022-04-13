@@ -17,7 +17,7 @@
                 <input type="text" class="form__input" placeholder="User ID" required>
                 <input type="password" class="form__input" placeholder="Enter Password" required>
                 <input type="checkbox" class="form__checkbox"><span>Remember Password</span>
-                <button type="submit" class="form__submitbutton" onclick="location.href='ViR_page2.html'">Login</button>
+                <button type="submit" class="form__submitbutton" onclick="location.href='index.php'">Login</button>
             </form>
             <form id="form__register" class="form__inputgroup">
                 <input type="text" class="form__input" placeholder="User ID" required>

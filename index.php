@@ -25,8 +25,9 @@
                         Dropdown content
                     </div>
                 </div>
+                <button type="button" class="button--toggle" onclick="location.href='ViR.php'">Login/Register</button>
                 <button type="button" class="button--toggle" >About Us</button>
-                <button type="button" class="button--toggle" >Contact</button>
+                <button type="button" class="button--toggle" onclick="location.href='contactViR.html'">Contact</button>
             </div>
         </div>
 
