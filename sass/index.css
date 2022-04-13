@@ -8,7 +8,7 @@ header{
     flex-wrap: wrap;
     justify-content:flex-start;
     align-items:center;
-    padding: 0px 10%;
+    padding: 0 10%;
     box-shadow: 0 0 20px 9px #244cff34;
     border-radius: 30px;
     width: 90%;
@@ -72,14 +72,14 @@ header{
   .dropdown-menu{
       position: absolute;
       left: 0;
-      top:calc(100%+25rem);
+      top:calc(100% + 25rem);
       background-color: white;
       padding: .75rem;
       border-radius: .25rem;
       box-shadow: 0 2px 5px 0 rgba(0,0,0,.1);
       opacity: 0;
-      transform: translateY(-10px);
-      transition: opacity 150ms ease-in-out, transform 150 ease-in-out;
+      /*transform: translateY(-10px);*/
+      /*transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;*/
       pointer-events: none;
   }
   .dropdown.active > .toggle-button + .dropdown-menu{
