@@ -46,7 +46,7 @@
     <div class="row">
         <h2> Video Reviews made easy!</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge" onclick="printme()">
+            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge" onclick="location.href='movie_template.html'">
             <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
             <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
             <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
