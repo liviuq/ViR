@@ -25,7 +25,7 @@ body {
     background: linear-gradient(to right, #0231ff9a, #5817d14f);
 }
 
-.wrapper {
+.about {
     position: relative;
     display: flex;
     color: white;

@@ -30,9 +30,8 @@
                 <button type="button" class="button--toggle" onclick="location.href='contactViR.html'">Contact</button>
             </div>
         </div>
-
 <!--        Banner-->
-        <div class="banner">
+    <div class="banner">
             <div class="banner__contents">
                 <h1 class="banner__title">Lorem Ipsum</h1>
                 <div class="banner__description">

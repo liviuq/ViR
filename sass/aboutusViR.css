@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+.about {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/login_register_background.jpg);
+}
+
+.about__items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  min-height: 80vh;
+  position: absolute;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 5px;
+}
+
+.item__image {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+}
+
+.item__image img {
+  width: 500px;
+  height: 500px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.item__text {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 22px;
+}
+
+.item__text h1 {
+  font-size: 70px;
+  padding: 20px 0;
+}
+
+.item__text a {
+  text-decoration: none;
+  padding: 12px;
+  margin: 50px 0;
+  background-color: rebeccapurple;
+  border: 2px solid transparent;
+  color: white;
+  border-radius: 5px;
+  transition: 0.3s all ease;
+}
+
+.item__text a:hover {
+  background-color: transparent;
+  color: black;
+  border: 2px solid rebeccapurple;
+}
+
+.item__image img {
+  width: 400px;
+  height: 400px;
+}
+
+.item__text h1 {
+  font-size: 50px;
+}
+
+@media screen and (max-width: 1600px) {
+  .about__items {
+    width: 90%;
+  }
+}
+.about__items {
+  flex-direction: column;
+}
+
+/*# sourceMappingURL=aboutusViR.css.map */
