@@ -14,9 +14,16 @@
             <img src="https://picsum.photos/500/500" alt="">
         </div>
         <div class="item__text">
-            <h1>About us</h1>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi porro rerum cupiditate expedita <br> distinctio nisi nulla ipsum libero molestiae minima Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,ipsum libero molestiae</p>
-            <a href="">Read More</a>
+            <h1>Nice to meet you!</h1>
+            <div class="text__intro">
+                Hi! We are a team of two curious individuals who are working together
+                to create our first full-fledged website.
+                <br>
+                Let me present myself as the writer of this document, Andrew. I am a
+                21 years old Computer Science student at Al. I. Cuza University in Iasi
+                and I like to read science fiction books in my spare time.
+            </div>
+            <a href="index.php">Go back to the movies</a>
         </div>
     </div>
 </div>

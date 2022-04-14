@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap')
+*
+    margin: 0
+    padding: 0
+    font-family: 'Roboto', sans-serif
+
+.root
+    height: 100%
+    width: 100%
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(../img/login_register_background.jpg)
+    background-position: center
+    background-size: cover
+    position: absolute
+
+.form
+    width: 380px
+    height: 480px
+    position: relative
+    margin: 6% auto
+    background: #fff
+    padding: 5px
+    overflow: hidden
+
+.form__input
+    top: 180px
+    position: absolute
+    width: 280px
+    transition: .5s
+
+.input-field
+    width: 100%
+    padding: 10px 0
+    margin: 5px 0
+    border-left: 0
+    border-right: 0
+    border-top: 0
+    border-bottom:  1px solid #999
+    outline: none
+    background: transparent
+
+#contact_us
+    left: 50px
+
+.input__submit
+    width: 85%
+    padding: 10px 30px
+    cursor: pointer
+    display: block
+    margin: auto
+    background: linear-gradient(to right,#0231ff9a,#5817d14f)
+    border: 0
+    outline: none
+    border-radius: 30px
+    margin-top: 20px
+
+.form__logo
+    margin : 30px auto
+    text-align: center
+
+.form__logo
+    img
+        width: 70px
+        cursor: pointer
+
+h1
+    position: relative
+    padding-bottom: 10px
+    margin-top: 15px
+    margin-bottom: 10px
+    text-align: center
+
+h1:after
+    content: ''
+    position: absolute
+    bottom: 0
+    transform: translateX(-135px)
+    height: 4px
+    width: 100px
+    border-radius: 2px
+    background: linear-gradient(to right,#0231ff9a,#5817d14f)
+
+#textarea
+    resize: none

@@ -26,7 +26,7 @@
                 <input type="checkbox" class="form__checkbox"><span>I agree to the terms and conditions</span>
                 <button type="submit" class="form__submitbutton">Register</button>
             </form>
-            <div class="logo">
+            <div class="form__logo">
                 <img src="img/test_icon.png" alt="test">
             </div>
         </div>
