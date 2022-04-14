@@ -33,6 +33,14 @@ body {
     margin-left: 40px;
 }
 
+.wrapper {
+    position: relative;
+    display: flex;
+    color: white;
+    min-width: 400px;
+    margin-left: 40px;
+}
+
 .wrapper__search {
     position: absolute;
     top: 8px;
@@ -88,8 +96,9 @@ body {
 
 .nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     color: white;
     background: linear-gradient(180deg, rgba(0,0,0,1) 0%,transparent  100%);
     position: fixed;
@@ -150,7 +159,7 @@ body {
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 20px;
+    padding: 10px;
 }
 .row__posters img {
     cursor: pointer;
