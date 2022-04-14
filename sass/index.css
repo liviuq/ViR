@@ -10,6 +10,12 @@ body {
     /*background: linear-gradient(90deg, rgba(146,213,228,1) 0%, rgba(106,103,232,1) 33%, rgba(184,97,217,1) 66%, rgba(66,179,201,1) 100%);*/
 }
 
+h2 {
+    text-decoration-line: underline;
+    text-decoration-color: #fb6c00;
+    text-decoration-thickness: 3px;
+}
+
 .button--toggle {
     color: white;
     padding: 10px 30px;
@@ -22,7 +28,7 @@ body {
 }
 
 .button--toggle:hover {
-    background: linear-gradient(to right, #0231ff9a, #5817d14f);
+    background: linear-gradient(to right, #fb6c00, #f9b575);
 }
 
 .about {
@@ -55,7 +61,7 @@ body {
     width: 100%;
     padding: 2px 23px 2px 30px;
     outline: 0;
-    background-color: #244cff34;
+    background-color: white;
 }
 
 .nav__buttons {
@@ -63,11 +69,11 @@ body {
 }
 
 .button__dropdown.active > .button--toggle, .button--toggle:hover {
-    background: linear-gradient(to right, #0231ff9a, #5817d14f)
+    background: linear-gradient(to right, #fb6c00, #f9b575);
 }
 
 .search:hover, .search:focus {
-    background: linear-gradient(to right, #0231ff9a, #5817d14f);
+    background: linear-gradient(to right, #fb6c00, #f9b575);
 }
 
 .button__dropdown {
@@ -100,7 +106,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     color: white;
-    background: linear-gradient(180deg, rgba(0,0,0,1) 0%,transparent  100%);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 70%, transparent 100%);
     position: fixed;
     padding: 20px;
     z-index: 1;
@@ -160,6 +166,8 @@ body {
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 10px;
+    padding-top: 3em;
+    padding-bottom: 3rem;
 }
 .row__posters img {
     cursor: pointer;

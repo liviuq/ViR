@@ -45,43 +45,42 @@
     <div class="row">
         <h2> Video Reviews made easy!</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge" onclick="location.href='movie_template.html'">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
-            <img src="https://picsum.photos/720/1280" alt="a simple image" class="row__poster row__posterLarge">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster" onclick="location.href='movie_template.html'">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
         </div>
     </div>
 <!--    Trending now-->
     <div class="row">
         <h2>Trending now</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
         </div>
     </div>
 <!--    Top Rated-->
     <div class="row">
         <h2>Top Rated</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
 
         </div>
     </div>
@@ -89,14 +88,14 @@
     <div class="row">
         <h2>Action Movies</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
 
         </div>
     </div>
@@ -104,14 +103,14 @@
     <div class="row">
         <h2>Comedy Movies</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
 
         </div>
     </div>
@@ -119,14 +118,14 @@
     <div class="row">
         <h2>Horror Movies</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
 
         </div>
     </div>
@@ -134,14 +133,14 @@
     <div class="row">
         <h2>Romance Movies</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
 
         </div>
     </div>
@@ -149,14 +148,14 @@
     <div class="row">
         <h2>Documentaries</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
-            <img src="https://picsum.photos/220/121" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
 
         </div>
     </div>
