@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Video Review</title>
     <link rel="stylesheet" href="sass/index.css">
-    <script src="script.js" defer></script>
+    <script src="js/script.js" defer></script>
 
 <!--    roboto font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
