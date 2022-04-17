@@ -2,12 +2,13 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .root {
   height: 100%;
   width: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(../img/login_register_background.jpg);
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../img/login_register_background.jpg);
   background-position: center;
   background-size: cover;
@@ -28,7 +29,8 @@
   top: 180px;
   position: absolute;
   width: 280px;
-  transition: 0.5s;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .input-field {
@@ -53,7 +55,8 @@
   cursor: pointer;
   display: block;
   margin: auto;
-  background: linear-gradient(to right, rgba(2, 49, 255, 0.6039215686), rgba(88, 23, 209, 0.3098039216));
+  background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575));
+  background: linear-gradient(to right, #fb6c00, #f9b575);
   border: 0;
   outline: none;
   border-radius: 30px;
@@ -64,6 +67,7 @@
   margin: 30px auto;
   text-align: center;
 }
+
 .form__logo img {
   width: 70px;
   cursor: pointer;
@@ -78,18 +82,19 @@ h1 {
 }
 
 h1:after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
-  transform: translateX(-135px);
+  -webkit-transform: translateX(-135px);
+          transform: translateX(-135px);
   height: 4px;
   width: 100px;
   border-radius: 2px;
+  background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575));
   background: linear-gradient(to right, #fb6c00, #f9b575);
 }
 
 #textarea {
   resize: none;
 }
-
 /*# sourceMappingURL=contactViR.css.map */
