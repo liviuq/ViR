@@ -9,34 +9,133 @@ body {
     background: black;
     /*background: linear-gradient(90deg, rgba(146,213,228,1) 0%, rgba(106,103,232,1) 33%, rgba(184,97,217,1) 66%, rgba(66,179,201,1) 100%);*/
 }
-
-
-.container{
-    position: relative;
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 20px 100px;
-    right: 80px;
-    top:50px
-}
-.container-box{
-    max-width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-.left{
-    height: 100%;
-    background-size: cover;
-}
-.left img{
-    width: 250px;
-}
-h1{
+.button--toggle {
     color: white;
-}
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    border-radius: 30px;
+    outline: none;
+    position: relative;
+  }
+  
+  .button--toggle:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575));
+    background: linear-gradient(to right, #fb6c00, #f9b575);
+  }
+  
+  .wrapper {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: white;
+    min-width: 400px;
+    margin-left: 40px;
+  }
+  
+  .wrapper__search {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 14px;
+  }
+  
+  .search {
+    border: 1px;
+    border-radius: 30px;
+    height: 30px;
+    width: 100%;
+    padding: 2px 23px 2px 30px;
+    outline: 0;
+    background-color: white;
+  }
+  
+  .nav__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  
+  .button__dropdown.active > .button--toggle, .button--toggle:hover {
+    background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575));
+    background: linear-gradient(to right, #fb6c00, #f9b575);
+  }
+  
+  .search:hover, .search:focus {
+    background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575));
+    background: linear-gradient(to right, #fb6c00, #f9b575);
+  }
+  
+  .button__dropdown {
+    position: relative;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    left: 0;
+    /*top: calc(80% + 25rem);*/
+    background-color: grey;
+    padding: .75rem;
+    border-radius: .25rem;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+    -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+    transition: opacity 150ms ease-in-out, transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+    pointer-events: none;
+  }
+  
+  .button__dropdown.active > .button--toggle + .dropdown-menu {
+    opacity: 1;
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+    pointer-events: auto;
+  }
+  
+  .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    color: white;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(transparent));
+    background: linear-gradient(180deg, black 70%, transparent 100%);
+    position: fixed;
+    padding: 20px;
+    z-index: 1;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    top: 0;
+    width: 100%;
+  }
+  
+  .nav__black {
+    background-color: #111;
+  }
+  
+  .nav__logo {
+    width: 80px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .poster{
+      margin-left: 20px;
+  }
+  h1{
+      color: white;
+  }
