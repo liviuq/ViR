@@ -9,20 +9,7 @@ body {
     background: black;
     /*background: linear-gradient(90deg, rgba(146,213,228,1) 0%, rgba(106,103,232,1) 33%, rgba(184,97,217,1) 66%, rgba(66,179,201,1) 100%);*/
 }
-.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    background: purple;
-    position: fixed;
-    padding: 20px;
-    z-index: 1;
-    transition-timing-function: ease-in;
-    transition: all 0.5s;
-    top: 0;
-    width: 100%;
-}
+
 
 .container{
     position: relative;
