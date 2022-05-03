@@ -1,0 +1,282 @@
+$font-stack: "Roboto", sans-serif
+
+*
+  box-sizing: border-box
+  margin: 0
+  padding: 0
+
+body
+  font-family: $font-stack
+  background: black
+
+.button--toggle
+  color: white
+  padding: 10px 30px
+  cursor: pointer
+  background: transparent
+  border: 0
+  border-radius: 30px
+  outline: none
+  position: relative
+
+.button--toggle:hover
+  background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575))
+  background: linear-gradient(to right, #fb6c00, #f9b575)
+
+.wrapper
+  position: relative
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  color: white
+  min-width: 400px
+  margin-left: 40px
+
+.wrapper__search
+  position: absolute
+  top: 8px
+  left: 8px
+  width: 14px
+
+.search
+  border: 1px
+  border-radius: 30px
+  height: 30px
+  width: 100%
+  padding: 2px 23px 2px 30px
+  outline: 0
+  background-color: white
+
+.nav__buttons
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+
+.button__dropdown.active > .button--toggle, .button--toggle:hover
+  background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575))
+  background: linear-gradient(to right, #fb6c00, #f9b575)
+
+.search:hover, .search:focus
+  background: -webkit-gradient(linear, left top, right top, from(#fb6c00), to(#f9b575))
+  background: linear-gradient(to right, #fb6c00, #f9b575)
+
+.button__dropdown
+  position: relative
+
+.dropdown-menu
+  position: absolute
+  left: 0
+  background-color: grey
+  padding: .75rem
+  border-radius: .25rem
+  -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1)
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1)
+  opacity: 0
+  //-webkit-transform: translateY(-10px)
+  transform: translateY(-10px)
+  -webkit-transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out
+  //transition: opacity 150ms ease-in-out, -webkit-transform 150ms ease-in-out
+  //transition: opacity 150ms ease-in-out, transform 150ms ease-in-out
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out
+  pointer-events: none
+
+.button__dropdown.active > .button--toggle + .dropdown-menu
+  opacity: 1
+  //-webkit-transform: translateY(15px)
+  transform: translateY(15px)
+  pointer-events: auto
+
+.nav
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-align: center
+  -ms-flex-align: center
+  align-items: center
+  -webkit-box-pack: center
+  -ms-flex-pack: center
+  justify-content: center
+  -ms-flex-wrap: wrap
+  flex-wrap: wrap
+  color: white
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(70%, black), to(transparent))
+  background: linear-gradient(180deg, black 70%, transparent 100%)
+  position: fixed
+  padding: 20px
+  z-index: 1
+  -webkit-transition-timing-function: ease-in
+  transition-timing-function: ease-in
+  -webkit-transition: all 0.5s
+  transition: all 0.5s
+  top: 0
+  width: 100%
+
+.nav__black
+  background-color: #111
+
+.nav__logo
+  width: 80px
+  -o-object-fit: contain
+  object-fit: contain
+
+h1
+  color: #fb6c00
+
+h2
+  color: white
+  margin-bottom: 20px
+
+.rating
+  color: #fb6c00
+
+.rating::after
+  content: '7.8'
+  color: white
+
+.actors
+  color: #fb6c00
+  margin-top: 20px
+
+.actors::after
+  content: 'Nume1, Nume2, Nume3'
+  color: white
+
+.director
+  color: #fb6c00
+  margin-top: 20px
+
+.director::after
+  content: 'Nume1'
+  color: white
+
+.writer
+  color: #fb6c00
+  margin-top: 20px
+
+.writer::after
+  content: 'Nume1'
+  color: white
+
+.flexbox-container
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  width: 100%
+  margin-top: 100px
+
+.flexbox-item
+  margin: 10px
+  background-color: black
+
+.flexbox-item-1
+  img
+    width: 247px
+    border: 3px solid white
+
+.flexbox-item-2
+  padding: 10px
+  width: 1200px
+  border: 3px solid white
+
+h3
+  margin-top: 20px
+  color: #fb6c00
+  text-align: center
+  font-size: 36px
+
+.info_child
+  color: white
+  text-align: center
+
+.row__posters
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  overflow-y: hidden
+  overflow-x: scroll
+  padding: 10px
+  padding-top: 3em
+  padding-bottom: 3rem
+
+.row__posters
+  img
+    cursor: pointer
+
+.row__poster:hover
+  -webkit-transform: scale(1.1)
+
+.row__posters::-webkit-scrollbar
+  display: none
+
+.row__poster
+  width: 100%
+  -o-object-fit: contain
+  object-fit: contain
+  margin-right: 10px
+  -webkit-transition: -webkit-transform 450ms
+  transition: -webkit-transform 450ms
+  //transition: transform 450ms
+  //transition: transform 450ms, -webkit-transform 450ms
+
+.row__posterLarge
+  max-height: 250px
+
+.row__posterLarge:hover
+  -webkit-transform: scale(1.14)
+  transform: scale(1.14)
+
+.row
+  color: white
+  margin-left: 20px
+
+h5
+  text-align: center
+  color: #fb6c00
+  margin-top: 40px
+  font-size: 36px
+
+h6
+  text-align: center
+  color: #fb6c00
+  margin-top: 10px
+  font-size: 36px
+
+.comment_box
+  display: flex
+  justify-content: center
+  flex-direction: column
+  width: 100%
+  text-align: center
+  align-items: center
+
+.comment
+  background-color: grey
+  margin: 10px
+  border: none
+  border-radius: 20px
+  min-height: 70px
+  width: 400px
+
+.comment1
+  margin-top: 60px
+
+.user
+  margin-top: 10px
+  text-align: left
+  color: #fb6400
+  margin-left: 5%
+
+.user::after
+  content: 'Date: dd/mm/yy'
+  margin-left: 20px
+  color: rgb(206, 205, 205)
+
+.rated
+  margin-bottom: 10px
+  text-align: right
+  color: #fb6400
+  margin-right: 5%
+
+.comment_in
+  padding: 5%
+  text-align: left

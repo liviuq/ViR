@@ -45,7 +45,7 @@
     <div class="row">
         <h2> Video Reviews made easy!</h2>
         <div class="row__posters">
-            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster" onclick="location.href='movie_template.html'">
+            <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster" onclick="location.href='movie_template.php'">
             <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
             <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
             <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
@@ -173,10 +173,6 @@
             nav.classList.remove('nav__black');
         }
     })
-
-    function printme() {
-        console.log(1);
-    }
 </script>
 </body>
 </html>
