@@ -1,4 +1,5 @@
 <?php
+    //This is the class that represents the actual movie data needed to fill the movie_template.php(to be html so we can use js, a bit cleaner)
     class Movie
     {
         //DB stuff
@@ -32,7 +33,7 @@
             //change name table 'categories' to 'genres'
             //Create the query
             $query = '
-            SELECT 
+            select 
                 g.name as genre_name,
                 m.id,
                 m.title,
