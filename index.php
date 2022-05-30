@@ -8,7 +8,6 @@
     <meta charset="UTF-8">
     <title>Video Review</title>
     <link rel="stylesheet" href="sass/index.css">
-    <script src="js/script.js" defer></script>
 
 <!--    roboto font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -160,23 +159,10 @@
             <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
             <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
             <img src="https://picsum.photos/121/200" alt="a simple image" class="row__poster">
-
         </div>
     </div>
 
-<script>
-    const nav = document.getElementById('nav');
-
-    window.addEventListener('scroll', () => {
-        if(window.scrollY > 100)
-        {
-            nav.classList.add('nav__black');
-        }
-        else
-        {
-            nav.classList.remove('nav__black');
-        }
-    })
-</script>
+    <script src="js/script.js" defer></script>
+    <script src="js/cards.js"></script>
 </body>
 </html>
