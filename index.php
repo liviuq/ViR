@@ -22,12 +22,6 @@
                 <input class="search" placeholder="Search" type="text" >
             </div>
             <div class="nav__buttons">
-                <div class="button__dropdown" data-dropdown>
-                    <button type="button" class="button--toggle" data-dropdown-button>Categories</button>
-                    <div class="dropdown-menu">
-                        Dropdown content
-                    </div>
-                </div>
                 <button type="button" class="button--toggle" onclick="location.href='ViR.php'">Login/Register</button>
                 <button type="button" class="button--toggle" onclick="location.href='aboutusViR.php'">About Us</button>
                 <button type="button" class="button--toggle" onclick="location.href='contactViR.html'">Contact</button>
@@ -44,10 +38,15 @@
             </div>
             <div class="banner__fade"></div>
         </div>
-<!--    Start of the title-->
+
     <div class="row">
+        <!-- Genre name -->
         <h2>Placeholder</h2>
+
+        <!-- Movie cards that will be shown in this genre -->
         <div class="row__posters" id="firstrow">
+            <!-- Actual data of the cards will be concatenated here as images
+        <img src=${element['banner']} class="row__poster" onclick="location.href='movie_template.php?id=${element['id']}'"> -->
         </div>
     </div>
 
