@@ -6,9 +6,10 @@ function getCards()
     .then((data) => {
         //here you start to edit the DOM
         let cards = '';
-        data['data'].forEach(element => {
+        let temp_data = data['data'];
+        temp_data.forEach(element => {
             //console.log(element);
-            cards += `<img src=${element['banner']} class="row__poster">`;
+            cards += `<img src=${element['banner']} class="row__poster" onclick="location.href='movie_template.html?id=${element['id']}'">`;
         });
 
         document.getElementById('firstrow').innerHTML = cards;
