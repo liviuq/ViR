@@ -39,8 +39,15 @@
                 'title' => $title,
                 'banner' => $banner,
                 'synopsis' => html_entity_decode($synopsis),
+                'rating' => $rating,
+                'actors' => $actors,
+                'director' => $director,
+                'writer' => $writer,
+                'status' => $status,
+                'aired' => $aired,
                 'genre' => $genre,
-                'genre_name' => $genre_name
+                'genre_name' => $genre_name,
+                'created_at' => $created_at
             );
 
             //Push to "data"
