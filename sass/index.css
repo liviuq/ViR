@@ -218,7 +218,7 @@ h2 {
 }
 
 .row__poster {
-  width: 100%;
+  /*width: 100%;*/
   -o-object-fit: contain;
      object-fit: contain;
   /*max-height: 100px;*/

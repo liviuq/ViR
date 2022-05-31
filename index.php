@@ -1,11 +1,9 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video Review</title>
     <link rel="stylesheet" href="sass/index.css">
 
@@ -37,20 +35,9 @@
                 </div>
             </div>
             <div class="banner__fade"></div>
-        </div>
-
-    <div class="row">
-        <!-- Genre name -->
-        <h2>Placeholder</h2>
-
-        <!-- Movie cards that will be shown in this genre -->
-        <div class="row__posters" id="firstrow">
-            <!-- Actual data of the cards will be concatenated here as images
-        <img src=${element['banner']} class="row__poster" onclick="location.href='movie_template.php?id=${element['id']}'"> -->
-        </div>
     </div>
 
     <script src="js/script.js" defer></script>
-    <script src="js/cards.js"></script>
+    <script src="js/cards.js" defer></script>
 </body>
 </html>
