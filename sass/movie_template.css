@@ -146,19 +146,9 @@ h2 {
   color: #fb6c00;
 }
 
-.rating::after {
-  content: "7.8";
-  color: white;
-}
-
 .actors {
   color: #fb6c00;
   margin-top: 20px;
-}
-
-.actors::after {
-  content: "Nume1, Nume2, Nume3";
-  color: white;
 }
 
 .director {
@@ -166,19 +156,9 @@ h2 {
   margin-top: 20px;
 }
 
-.director::after {
-  content: "Nume1";
-  color: white;
-}
-
 .writer {
   color: #fb6c00;
   margin-top: 20px;
-}
-
-.writer::after {
-  content: "Nume1";
-  color: white;
 }
 
 .flexbox-container {

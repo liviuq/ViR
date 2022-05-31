@@ -32,7 +32,7 @@ function getAndDisplayCards()
             //loop htrough the cards and add them to the row
             let cards = '';
             matching_movies.forEach(element => {
-                cards += `<img src="${element['banner']}" class="row__poster" onclick="location.href='movie_template.html?id=${element['id']}'" alt="${element['id']}" width="121" height="200">`;
+                cards += `<img src="${element['banner']}" class="row__poster" onclick="location.href='movie_template.html?id=${element['id']}'" alt="${element['id']}" width="200" height="400">`;
             });
          
             //reassign temp_data to contain all the other movies except the ones with matching genre

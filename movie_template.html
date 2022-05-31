@@ -21,19 +21,19 @@
     </div>
     <div class="flexbox-container">
         <div class="flexbox-item flexbox-item-1">
-            <img src="https://picsum.photos/241/400" alt="a simple image" class="poster">
+            <img id="banner" src="https://picsum.photos/241/400" alt="a simple image" class="poster">
         </div>
         <div class="flexbox-item flexbox-item-2">
             <h1>
                 Synopsis:
             </h1>
-            <h2>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean erat neque, elementum nec ligula at, pretium feugiat sem. Mauris orci risus, commodo quis condimentum quis, vestibulum quis libero. Etiam sit amet tellus pharetra, ultrices libero non, tempor massa. Integer congue dapibus velit vitae lacinia. Vivamus eu enim ipsum. Ut egestas enim consequat consequat gravida. Nunc in tortor vulputate, suscipit lectus sed, ultricies sem. Proin eu tincidunt lorem. Vestibulum turpis est, sodales eu euismod in, lobortis at elit. Maecenas lacinia vestibulum lectus. Nullam pellentesque ornare commodo.
+            <h2 id="synopsis">
+               
             </h2>
-            <p class="rating">Rating: </p>
-            <p class="actors">Actors: </p>
-            <p class="director">Director: </p>
-            <p class="writer">Writer: </p>
+            <p class="rating" id="rating">Rating: </p>
+            <p class="actors" id="actors">Actors: </p>
+            <p class="director" id="director">Director: </p>
+            <p class="writer" id="writer">Writer: </p>
         </div>
     </div>
     <div class="info">
@@ -41,10 +41,9 @@
             Information
         </h3>
         <div class="info_child">
-            <p class="status">Status: </p>
-            <p class="aired">Aired: </p>
-            <p class="source">Source: </p>
-            <p class="genre">Genres: </p>
+            <p class="status" id="status">Status: </p>
+            <p class="aired" id="aired">Aired: </p>
+            <p class="genre" id="genre">Genre: </p>
         </div>
     </div>
     
@@ -68,7 +67,8 @@
            <p class="rated">7.9</p>
         </div>
     </div>
-    <script src="js/editMovieTemplate.js"></script>
+
+    <script src="js/editMovieTemplate.js" defer></script>
 </body> 
 </html>
 
