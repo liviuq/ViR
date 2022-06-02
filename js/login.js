@@ -19,9 +19,9 @@ function login(e)
           },
         body:JSON.stringify({username:username, password:password})
         })
-        .then((res) => res.json())
-        .then((data) =>
-        {
+        .then((res) => console.log(res.text))
+        //.then((data) =>
+        //{
             console.log(data);
             // if(data['message'] == 'User not registered')
             // {
@@ -47,5 +47,5 @@ function login(e)
             //         document.getElementById('reg_good').classList.add("register_neutral");
             //       }, 2000);
             // }
-        })
+        //})
 }
