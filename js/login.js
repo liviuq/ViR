@@ -12,7 +12,7 @@ async function login(e)
 
     //post the data to the address
     //thanks Marius for the await tips n tricks
-    const res = await fetch('http://localhost/api/authentication/login.php', {
+    const res = await fetch('https://vira3.herokuapp.com/api/authentication/login.php', {
         method: "POST",
         headers: {
             'Accept': 'application/json',
