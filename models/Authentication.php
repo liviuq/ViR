@@ -73,7 +73,9 @@ class Authentication
                     header($response['content_type_header']);
                     if ($response['body'])
                     {
-                        echo $response['body'];
+                        echo json_encode(array(
+                            'message' => $response['body']
+                        ));
                     }
                     return 0;
                 }
@@ -81,7 +83,9 @@ class Authentication
                 {
                     //no user with those credentials
                     header('HTTP/1.1 401 Unauthorized');
-                    echo 'Wrong username or password';
+                    echo json_encode(array(
+                        'message' => 'Wrong username or password'
+                    ));
                     return 1;                    
                 }
             }
@@ -89,7 +93,9 @@ class Authentication
             {
                 //couldn t execute statement
                 header('HTTP/1.0 500 Internal Server Error');
-                echo 'Internal server error';
+                echo json_encode(array(
+                    'message' => 'Internal server error'
+                ));
                 return 3;
             }
         }
@@ -97,7 +103,9 @@ class Authentication
         {
             //Only POST actions are allowed
             header('HTTP/1.1 401 Unauthorized');
-            echo 'Only POST actions are allowed';
+            echo json_encode(array(
+                'message' => 'Only POST actions are allowed'
+            ));
             return 2;
         }      
     }
@@ -135,7 +143,9 @@ class Authentication
         if (! preg_match('/Bearer\s(\S+)/', $this -> getAuthorizationHeader(), $matches))
         {
             header('HTTP/1.0 400 Bad Request');
-            echo 'Token not found in request';
+            echo json_encode(array(
+                'message' => 'Token not found in request'
+            ));
             exit;
         }
         return $matches[1];
@@ -175,7 +185,9 @@ class Authentication
         catch (Exception $e)
         {
             header('HTTP/1.1 401 Unauthorized');
-            echo 'Invalid token';
+            echo json_encode(array(
+                'message' => 'Invalid token'
+            ));
             exit;
         }
         $now = new DateTimeImmutable();
@@ -186,7 +198,9 @@ class Authentication
             $token->exp < $now->getTimestamp())
         {
             header('HTTP/1.1 401 Unauthorized');
-            echo 'Invalid token';
+            echo json_encode(array(
+                'message' => 'Invalid token'
+            ));
             exit;
         }
     }

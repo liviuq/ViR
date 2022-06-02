@@ -30,6 +30,7 @@
                 <img src="img/test_icon.png" alt="test">
                 <h4 id="reg_error" class="register_neutral">Username or email already in use.</h4>
                 <h4 id="reg_good" class="register_neutral">User registered successfully</h4>
+                <h4 id="login_message"></h4>
             </div>
         </div>
     </div>
