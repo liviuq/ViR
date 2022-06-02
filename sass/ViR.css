@@ -117,4 +117,18 @@ span {
 .form__logo img {
   width: 70px;
 }
+
+.register_bad {
+  display: block;
+  color: red;
+}
+
+.register_neutral {
+  display: none;
+}
+
+.register_good {
+  display: block;
+  color: green;
+}
 /*# sourceMappingURL=ViR.css.map */
