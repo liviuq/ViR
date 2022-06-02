@@ -12,7 +12,7 @@ function register(e)
     let password = document.getElementById('reg_password').value;
 
     //post the data to the address
-    fetch('http://localhost/api/user/create.php', {
+    fetch('https://vira3.herokuapp.com/api/user/create.php', {
         method: "POST",
         headers: {
             'Accept': 'application/json, text/plain, */*',
