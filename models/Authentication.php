@@ -68,6 +68,7 @@ class Authentication
                 {
                     //the user exists and the credentials are valid
                     $response = $this->createJWT($this->username);
+                    // header('HTTP/1.1 200 OK');
                     header($response['status_code_header']);
                     header($response['content_type_header']);
                     if ($response['body'])

@@ -14,10 +14,10 @@
                 <button type="button" class="btn--toggle" onclick="register_move()">Register</button>
             </div>
             <form id="form__login" class="form__inputgroup">
-                <input type="text" class="form__input" placeholder="User ID" required>
-                <input type="password" class="form__input" placeholder="Enter Password" required>
+                <input id="login_username" type="text" class="form__input" placeholder="User ID" required>
+                <input id="login_password" type="password" class="form__input" placeholder="Enter Password" required>
                 <input type="checkbox" class="form__checkbox"><span>Remember Password</span>
-                <button type="submit" class="form__submitbutton" onclick="location.href='index.php'">Login</button>
+                <button id="login_button" type="submit" class="form__submitbutton">Login</button>
             </form>
             <form id="form__register" class="form__inputgroup">
                 <input id="reg_username" type="text" name="username" class="form__input" placeholder="User ID" required>
@@ -50,6 +50,7 @@
         }
     </script>
     <script src="js/register.js"></script>
+    <script src="js/login.js"></script>
 </body> 
 </html>
 
