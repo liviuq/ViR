@@ -105,7 +105,7 @@ class Authentication
     {
         $secret_Key = $this -> secret_Key;
         $date   = new DateTimeImmutable();
-        $expire_at     = $date->modify('+2 minutes')->getTimestamp();
+        $expire_at     = $date->modify('+10 minutes')->getTimestamp();
         $domainName = $this -> domainName;
         //edit this username to match the login one
         $request_data =
