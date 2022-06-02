@@ -67,7 +67,7 @@ class Authentication
                 if($counter > 0)
                 {
                     //the user exists and the credentials are valid
-                    $response = $this->createJWT();
+                    $response = $this->createJWT($this->username);
                     header($response['status_code_header']);
                     header($response['content_type_header']);
                     if ($response['body'])
@@ -101,14 +101,13 @@ class Authentication
         }      
     }
 
-    private function createJWT()
+    private function createJWT($username)
     {
         $secret_Key = $this -> secret_Key;
         $date   = new DateTimeImmutable();
         $expire_at     = $date->modify('+2 minutes')->getTimestamp();
         $domainName = $this -> domainName;
         //edit this username to match the login one
-        $username   = "username";
         $request_data =
         [
             'iat'  => $date->getTimestamp(),         // ! Issued at: time when the token was generated
