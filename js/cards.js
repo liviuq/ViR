@@ -9,7 +9,8 @@ function getAndDisplayCards()
         let temp_data = data['data'];
 
         //display cards by genre
-        while(temp_data.length)
+        let i=0;
+        while(i<temp_data.length)
         {
             //get current genre
             let current_genre = temp_data[0]['genre_name'];
@@ -45,6 +46,8 @@ function getAndDisplayCards()
             div.appendChild(h2);
             div.appendChild(cardsrow);
             document.querySelector('body').appendChild(div);
+        
+            i++;
         }
     });
 }
