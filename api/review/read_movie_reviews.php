@@ -40,6 +40,7 @@
              extract($row);
  
              $review_item = array(
+                 'username' => $username,
                  'id' => $id,
                  'user_id' => $user_id,
                  'movie_id' => $movie_id,

@@ -19,6 +19,7 @@
         {
             $query = '
             select 
+                u.username,
                 r.id,
                 r.user_id,
                 r.movie_id,
@@ -26,6 +27,7 @@
                 r.rating,
                 r.created_at
             from ' . htmlspecialchars(strip_tags($this->table)) . ' r
+            left join users u on u.id = r.user_id
             where r.movie_id = :movie_id
             order by r.created_at desc';
 
