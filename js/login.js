@@ -81,7 +81,7 @@ async function login(e)
         document.getElementById('login_message').classList.remove("register_neutral");
         document.getElementById('login_message').classList.remove("register_good");
 
-        document.getElementById('login_message').innerText = 'Login successfull';
+        document.getElementById('login_message').innerText = 'Login successful';
         document.getElementById('login_message').classList.add("register_good");
 
         //remove error
@@ -96,7 +96,7 @@ async function login(e)
         let date = new Date();
         date.setTime(date.getTime() + (10 * 60 * 1000)); //10 min cookie
         const expires = date.toUTCString();
-        document.cookie = `${username}=${body['message']}; expires=${expires}; path=/`;
+        document.cookie = `token=${body['message']}; expires=${expires}; path=/`;
         setTimeout(function(){
             window.location.href = "index.php";
         }, 2000);
