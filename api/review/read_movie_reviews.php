@@ -12,9 +12,14 @@
 
     //Instantiate movie object
     $review = new Review($db);
+    
+
+    //Set review movie id
+    //Get the ID from the URL
+    $review -> movie_id = isset($_GET['id']) ? $_GET['id'] : die();
 
     //Movie query
-    $result = $review->read();
+    $result = $review->read_movie_reviews();
 
     //Getting row count
     $num = $result->rowCount();
