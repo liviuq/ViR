@@ -48,8 +48,25 @@
     </div>
     
     <div class="comment_box" id="reviews">
-        <h6>Comment Section</h6>
-        
+            <h6>Comment Section </h6>
+        <form class="hidden_form">
+            <div class="flexform">
+                <textarea spellcheck="false" id="textarea" class="hidden_rev" placeholder="Your Review" required></textarea>
+                <select class ="rating__form" name="rating" id="rating" required>
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                    <option value="1">6</option>
+                    <option value="1">7</option>
+                    <option value="1">8</option>
+                    <option value="1">9</option>
+                    <option value="1">10</option> 
+                </select>
+            </div>
+            <input  id="hidden_form_btn" class="hidden_form_btn" type="submit" value="Submit">
+        </form>
     </div>
 
     <script src="js/editMovieTemplate.js" defer></script>

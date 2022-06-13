@@ -66,3 +66,10 @@ fetch(`https://vira3.herokuapp.com/api/movie/read_single.php?id=${id}`)
        
     })
     .catch((error)=>{console.error(error);});
+
+    document.getElementById('hidden_form_btn')
+    .addEventListener("click",submitReview);
+
+    function submitReview(e){
+        e.preventDefault();
+    }
