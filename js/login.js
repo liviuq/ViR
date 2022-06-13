@@ -92,6 +92,7 @@ async function login(e)
             document.getElementById('reg_error').classList.add("register_neutral");
           }, 2000);
 
+        //what the
         //set cookie with the JWT
         let date = new Date();
         date.setTime(date.getTime() + (10 * 60 * 1000)); //10 min cookie
