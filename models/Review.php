@@ -23,7 +23,7 @@
                 r.user_id,
                 r.movie_id,
                 r.body,
-                r.rating
+                r.rating,
                 r.created_at
             from ' . htmlspecialchars(strip_tags($this->table)) . ' r
             where r.movie_id = :movie_id
