@@ -124,7 +124,7 @@ class Authentication
             'nbf'  => $date->getTimestamp(),         // ! Not before
             'exp'  => $expire_at,                    // ! Expire
             //here too!!
-            'userName' => $username,                 // User name
+            'username' => $username,                 // User name
         ];
 
         $response['status_code_header'] = 'HTTP/1.1 200 OK';
