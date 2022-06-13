@@ -3,12 +3,12 @@
         private $conn;
         private $table = 'reviews';
 
-        private $id;
-        private $user_id;
-        private $movie_id;
-        private $body;
-        private $rating;
-        private $created_at;
+        public $id;
+        public $user_id;
+        public $movie_id;
+        public $body;
+        public $rating;
+        public $created_at;
 
         public function __construct($db)
         {
