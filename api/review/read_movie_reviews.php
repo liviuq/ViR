@@ -10,7 +10,7 @@
     $database = new Database();
     $db = $database->connect();
 
-    //Instantiate movie object
+    //Instantiate review object
     $review = new Review($db);
     
 
@@ -18,21 +18,21 @@
     //Get the ID from the URL
     $review -> movie_id = isset($_GET['id']) ? $_GET['id'] : die();
 
-    //Movie query
+    //review query
     $result = $review->read_movie_reviews();
 
     //Getting row count
     $num = $result->rowCount();
 
-     //Check to see if there are any movies
+     //Check to see if there are any review
      if($num > 0)
      {
-         //there are movies
+         //there are review
  
-         //Initialize movie array
+         //Initialize review array
          $review_arr = array();
          //Just in case we want to send more things down the lane
-         //I added the movies JSON to the field called 'data'
+         //I added the review JSON to the field called 'data'
          $review_arr['data'] = array();
  
          while($row = $result->fetch(PDO::FETCH_ASSOC))
@@ -58,7 +58,7 @@
      }
      else
      {
-         //no movies
+         //no review
          echo json_encode(array(
              'message' => 'No reviews found'
          ));

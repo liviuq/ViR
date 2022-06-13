@@ -43,6 +43,11 @@ fetch(`https://vira3.herokuapp.com/api/movie/read_single.php?id=${id}`)
             const p1 = document.createElement('p');
             p1.setAttribute('class','user');
             p1.innerText=element['username'];
+            
+            //userDATE
+            const p8 = document.createElement('p');
+            p8.setAttribute('class','userDATE');
+            p8.innerText=element['created_at'];
 
             const p2 = document.createElement('p');
             p2.setAttribute('class','comment_in');
@@ -53,6 +58,7 @@ fetch(`https://vira3.herokuapp.com/api/movie/read_single.php?id=${id}`)
             p3.innerText=element['rating'];
 
             div.appendChild(p1);
+            div.appendChild(p8);
             div.appendChild(p2);
             div.appendChild(p3);
             document.getElementById('reviews').appendChild(div);

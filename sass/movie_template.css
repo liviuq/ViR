@@ -277,6 +277,7 @@ h6 {
   width: 400px;
 }
 
+
 .comment1 {
   margin-top: 60px;
 }
@@ -287,12 +288,13 @@ h6 {
   color: #fb6400;
   margin-left: 5%;
 }
-
-.user::after {
-  content: "Date: dd/mm/yy";
-  margin-left: 20px;
-  color: rgb(206, 205, 205);
+.userDATE{
+  margin-top: 5px;
+  text-align: left;
+  color: rgb(206, 205, 205);;
+  margin-left: 5%;
 }
+
 
 .rated {
   margin-bottom: 10px;
