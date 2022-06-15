@@ -14,9 +14,9 @@ if(cookieValue)
     //instead of login/register, we display user's username
     document.getElementById('user__name').innerText = `Hello, ${username}`;
 
-    document.getElementById('user__name').setAttribute('onclick', '');
+    //document.getElementById('user__name').setAttribute('onclick', '');
 
-    document.getElementById('user__name').setAttribute('onclick', ' location.href=\'user_template.html\'\" ');
+    document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
 }
 else
 {
