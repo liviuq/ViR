@@ -76,11 +76,17 @@ async function submitReview(e){
     let body = document.getElementById('text__area').value;
     let rating = document.getElementById('rating__value').value;
    
+    const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('token='))
+        ?.split('=')[1];
+    console.log(cookieValue);
     const res = await fetch(`https://vira3.herokuapp.com/api/review/create.php?id=${id}`, {
         method: "POST",
         headers: {
             'Accept': 'application/json',
-            'Content-type':'application/json'
+            'Content-type':'application/json',
+            'Authorization': `Bearer ${cookieValue}`
             },
             body:JSON.stringify({body:body, rating:rating})
         });
