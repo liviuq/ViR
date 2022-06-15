@@ -38,5 +38,6 @@
 
     <script src="js/script.js" defer></script>
     <script src="js/cards.js" defer></script>
+    <script src="js/editIndex.js" defer></script>
 </body>
 </html>
