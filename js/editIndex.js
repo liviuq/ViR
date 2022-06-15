@@ -5,10 +5,10 @@ const cookieValue = document.cookie
 if(cookieValue)
 {
     //we have the cookie
-    cookieValue = cookieValue.split('=')[1];
+    tokenValue = cookieValue.split('=')[1];
 
     //decode the cookie
-    JWTdecoded = parseJWT(cookieValue);
+    JWTdecoded = parseJWT(tokenValue);
     let username = JWTdecoded['username'];
 
     //instead of login/register, we display user's username
