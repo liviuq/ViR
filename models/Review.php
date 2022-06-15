@@ -9,7 +9,7 @@
         public $body;
         public $rating;
         public $created_at;
-
+        
         public function __construct($db)
         {
             $this->conn = $db;
@@ -38,5 +38,18 @@
             return $stmt;
         }
 
+        //publish a review 
+        public function create($username)
+        {
+            $query = 'insert into ' . $this->table .  ' (user_id, movie_id, body, rating)
+            values((select id from users where username = :username), :movie_id, :body, :rating)';
+
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindParam(':username', $username);
+            $stmt->bindParam(':movie_id', $this->movie_id);
+            $stmt->bindParam(':body', $this->body);
+            $stmt->bindParam(':rating', $this->rating);
+            $stmt->execute();
+        }
     }
 ?>

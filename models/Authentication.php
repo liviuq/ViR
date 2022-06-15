@@ -146,7 +146,7 @@ class Authentication
             echo json_encode(array(
                 'message' => 'Token not found in request'
             ));
-            exit;
+            return 1;
         }
         return $matches[1];
     }
@@ -188,7 +188,7 @@ class Authentication
             echo json_encode(array(
                 'message' => 'Invalid token'
             ));
-            exit;
+            return 1;
         }
         $now = new DateTimeImmutable();
         $domainName = $this -> domainName;
@@ -201,7 +201,10 @@ class Authentication
             echo json_encode(array(
                 'message' => 'Invalid token'
             ));
-            exit;
+            return 1;
         }
+
+        //good token
+        return 0;
     }
 }
