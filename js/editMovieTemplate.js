@@ -72,15 +72,15 @@ document.getElementById('hidden_form_btn')
 async function submitReview(e){
     e.preventDefault();
 
-    //get review body and rating
+    //get review body, rating and cookie JWT
     let body = document.getElementById('text__area').value;
     let rating = document.getElementById('rating__value').value;
-   
     const cookieValue = document.cookie
         .split('; ')
         .find(row => row.startsWith('token='))
         ?.split('=')[1];
-    console.log(cookieValue);
+
+    //create the POST request
     const res = await fetch(`https://vira3.herokuapp.com/api/review/create.php?id=${id}`, {
         method: "POST",
         headers: {
@@ -92,4 +92,5 @@ async function submitReview(e){
         });
     const reply = await res.json();
     console.log(reply);
+    //marcu will do this
 }
