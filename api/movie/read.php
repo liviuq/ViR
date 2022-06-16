@@ -60,6 +60,7 @@
     else
     {
         //no movies
+        header('HTTP/1.1 204 No Content');
         echo json_encode(array(
             'message' => 'No movies found'
         ));
