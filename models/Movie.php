@@ -161,6 +161,21 @@
             //Execute query
             if($stmt->execute())
             {
+                //before returning, add the movie to the RSS Feed
+                //Add this review to the rss table
+                $query = 'insert into rss (title, body, rating, author, category) 
+                values (\'New movie\', :body, \'0\', \'System\', \'Movie\')';
+
+                //Prepare
+                $stmt = $this->conn->prepare($query);
+
+                //Sanitize input
+                $new_body = 'Bring popcorn to watch ' . $this->title . '!';
+                $stmt->bindParam(':body', htmlspecialchars(strip_tags($new_body)));
+            
+                //Execute
+                $stmt->execute();
+
                 return true;
             }
 
