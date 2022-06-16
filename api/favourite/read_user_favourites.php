@@ -17,9 +17,6 @@
     //Instantiate Auth object
     $auth = new Authentication($db);
 
-    //Get the ID from the URL
-    $movie_id = isset($_GET['id']) ? $_GET['id'] : die();
-
     //define the username
     $username = '';
 
