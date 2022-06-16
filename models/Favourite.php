@@ -43,6 +43,7 @@
             }
             else
             {
+                echo 'Constructor in favourite has gone mad';
                 die();
             }
         }
@@ -76,8 +77,33 @@
         //Create favourite
         public function create()
         {
+            //first check to see if the movie is already in user's fav list
+            $query = 'select * from ' . $this->table . 
+            ' where user_id = :user_id and movie_id = :movie_id';
+
+            //Prepare statement
+            $stmt = $this->conn->prepare($query);
+
+            //Clean data
+            $this->movie_id = htmlspecialchars(strip_tags($this->movie_id));
+            $this->user_id = htmlspecialchars(strip_tags($this->user_id));
+
+            //Bind data
+            $stmt->bindParam(':user_id', $this->user_id);
+            $stmt->bindParam(':movie_id', $this->movie_id);
+
+            //execute
+            $stmt->execute();
+
+            //check to see if the number is greater than 0
+            $num = $stmt->rowCount();
+            if($num != 0)
+            {
+                return 2;
+            }
+            
             //Create query
-            $query = 'insert into ' . htmlspecialchars(strip_tags($this->title)) . ' (user_id, movie_id) values (:user_id, :movie_id)';
+            $query = 'insert into ' . htmlspecialchars(strip_tags($this->table)) . ' (user_id, movie_id) values (:user_id, :movie_id)';
 
             //Prepare statement
             $stmt = $this->conn->prepare($query);
@@ -93,12 +119,12 @@
             //Execute query
             if($stmt->execute())
             {
-                return true;
+                return 0;
             }
 
             //Print error if smth goes wrong
             printf("Error: %s\n", $stmt->error);
-            return false;
+            return 1;
         }
 
         //Delete favourite
