@@ -14,7 +14,7 @@
             <input class="search" placeholder="Search" type="text" >
         </div>
         <div class="nav__buttons">
-            <button type="button" class="button--toggle" onclick="location.href='ViR.php'">Login/Register</button>
+            <button id = "user__name" type="button" class="button--toggle" onclick="location.href='ViR.php'">Login/Register</button>
             <button type="button" class="button--toggle" onclick="location.href='aboutusViR.php'">About Us</button>
             <button type="button" class="button--toggle" onclick="location.href='contactViR.html'">Contact</button>
         </div>
@@ -34,6 +34,9 @@
             <p class="actors" id="actors">Actors: </p>
             <p class="director" id="director">Director: </p>
             <p class="writer" id="writer">Writer: </p>
+            <p class="writer">
+                <button type="button" class="button--toggle">Add to favourites</button>
+            </p>
         </div>
     </div>
     <div class="info">
@@ -70,6 +73,7 @@
     </div>
 
     <script src="js/editMovieTemplate.js" defer></script>
+    <script src="js/editIndex.js"></script>
 </body> 
 </html>
 
