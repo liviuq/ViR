@@ -41,6 +41,7 @@
         //publish a review 
         public function create($username)
         {
+            //Query to insert review
             $query = 'insert into ' . $this->table .  ' (user_id, movie_id, body, rating)
             values((select id from users where username = :username), :movie_id, :body, :rating)';
 
@@ -49,6 +50,20 @@
             $stmt->bindParam(':movie_id', $this->movie_id);
             $stmt->bindParam(':body', $this->body);
             $stmt->bindParam(':rating', $this->rating);
+            $stmt->execute();
+
+            //Add this review to the rss table
+            $query = 'insert into rss (title, body, rating, author, category) 
+            values ((select title from movies where id = :movie_id), :body,
+            :rating, :username, \'Review\')';
+
+            $stmt = $this->conn->prepare($query);
+
+            $stmt->bindParam(':movie_id', $this->movie_id);
+            $stmt->bindParam(':body', $this->body);
+            $stmt->bindParam(':rating', $this->rating);
+            $stmt->bindParam(':username', $username);
+            
             $stmt->execute();
         }
     }

@@ -43,7 +43,9 @@
         echo "<pubDate>".$publish_Date."</pubDate>".PHP_EOL;
         echo "<dc:creator>".$row["author"]."</dc:creator>".PHP_EOL;
         echo "<description><![CDATA[" . $row["body"] . "]]></description>".PHP_EOL;
-        echo "<category> Review </category>".PHP_EOL;
+        echo "<rating>" . $row["rating"] . "</rating>".PHP_EOL;
+        //category either review or movie
+        echo "<category>" . $row["category"] . "</category>".PHP_EOL;
         echo "</item>".PHP_EOL;
     }
 
