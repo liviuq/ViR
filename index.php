@@ -27,11 +27,7 @@
 <!--        Banner-->
     <div class="banner">
             <div class="banner__contents">
-                <h1 class="banner__title">Lorem Ipsum</h1>
-                <div class="banner__description">
-                    Most viewed movie. this will be taken straight from the database based on
-                    the number of reviews
-                </div>
+                <h1 class="banner__title">Video Review Manager</h1>
             </div>
             <div class="banner__fade"></div>
     </div>
