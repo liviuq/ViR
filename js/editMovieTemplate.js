@@ -1,6 +1,7 @@
 //get the ID we pass in the URL
 const queryString = window.location.search;
 const urlParameters = new URLSearchParams(queryString);
+
 const id = urlParameters.get('id');
 
 //fetch the movie with the passed id
@@ -35,7 +36,7 @@ fetch(`https://vira3.herokuapp.com/api/movie/read_single.php?id=${id}`)
         let temp_data = data['data'];
          
         temp_data.forEach(element => {
-
+            console.log(element);
             const div = document.createElement('div');
             div.setAttribute('class', 'comment');
 
@@ -65,32 +66,12 @@ fetch(`https://vira3.herokuapp.com/api/movie/read_single.php?id=${id}`)
        
     })
     .catch((error)=>{console.error(error);});
+     
 
-document.getElementById('hidden_form_btn')
-.addEventListener("click",submitReview);
+    //exista cookiu token
+    document.getElementById('hidden_form_btn')
+    .addEventListener("click",submitReview);
 
-async function submitReview(e){
-    e.preventDefault();
-
-    //get review body, rating and cookie JWT
-    let body = document.getElementById('text__area').value;
-    let rating = document.getElementById('rating__value').value;
-    const cookieValue = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('token='))
-        ?.split('=')[1];
-
-    //create the POST request
-    const res = await fetch(`https://vira3.herokuapp.com/api/review/create.php?id=${id}`, {
-        method: "POST",
-        headers: {
-            'Accept': 'application/json',
-            'Content-type':'application/json',
-            'Authorization': `Bearer ${cookieValue}`
-            },
-            body:JSON.stringify({body:body, rating:rating})
-        });
-    const reply = await res.json();
-    console.log(reply);
-    //marcu will do this
-}
+    function submitReview(e){
+        e.preventDefault();
+    }
