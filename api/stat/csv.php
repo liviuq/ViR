@@ -48,12 +48,12 @@
                 'aired' => $aired,
                 'genre' => $genre
             );
-            $aired_temp = $aired == 1? 'Completed' : 'In progress';
-            echo `${title}, ${rating}, ${status}, ${aired_temp}, ${genre}`.PHP_EOL;
+            $aired_temp =  'Completed';
+            echo $title. ',' . $rating. ',' . $status. ',' . $aired_temp. ',' . $genre;
             //Push to "data"
             array_push($entries_arr['data'], $entry_item);
         }
-
+         
         //Turn to JSON & output
        // echo json_encode($entries_arr);
     }
