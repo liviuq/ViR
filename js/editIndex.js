@@ -34,3 +34,37 @@ function parseJWT (token)
 
     return JSON.parse(jsonPayload);
 };
+
+
+document.getElementById("csv__button")
+.addEventListener("click",parseCSV);
+document.getElementById("svg__button")
+.addEventListener("click",parseSVG);
+document.getElementById("rss__button")
+.addEventListener("click",showRSS);
+
+function parseCSV(){
+    //fetch the movie with the passed id    
+    fetch(`https://vira3.herokuapp.com/api/stat/csv.php`)
+    .then((res) => res.json())
+    .then((data) =>
+    {   
+        //start changing values
+        let temp_data = data['data'];
+        console.log(temp_data);
+    });
+}
+function parseSVG(){
+    //fetch the movie with the passed id    
+    fetch(`https://vira3.herokuapp.com/api/stat/svg.php`)
+    .then((res) => res.json())
+    .then((data) =>
+    {   
+        //start changing values
+        let temp_data = data['data'];
+        console.log(temp_data);
+    });
+}
+function showRSS(){
+    window.location = "https://vira3.herokuapp.com/api/rss/rss.php";
+}

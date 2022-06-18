@@ -22,6 +22,9 @@
                 <button id = "user__name" type="button" class="button--toggle" onclick="location.href='ViR.php'">Login/Register</button>
                 <button type="button" class="button--toggle" onclick="location.href='aboutusViR.php'">About Us</button>
                 <button type="button" class="button--toggle" onclick="location.href='contactViR.html'">Contact</button>
+                <button type="button" class="button--toggle" id="csv__button">CSV</button>
+                <button type="button" class="button--toggle" id="svg__button">SVG</button>
+                <button type="button" class="button--toggle" id="rss__button">RSS</button>
             </div>
         </div>
 <!--        Banner-->
