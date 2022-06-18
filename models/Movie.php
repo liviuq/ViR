@@ -294,7 +294,7 @@
             $query='select distinct 
             s2.rating,
             (select count(*) from '.htmlspecialchars(strip_tags($this->table)).' s1 
-            where s1.rating=s2.rating) from '.htmlspecialchars(strip_tags($this->table)).' s2;';
+            where s1.rating=s2.rating) as count from '.htmlspecialchars(strip_tags($this->table)).' s2;';
 
              //Prepare statement
              $stmt = $this->conn->prepare($query);
