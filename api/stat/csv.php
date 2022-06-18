@@ -48,7 +48,7 @@
                 'aired' => $aired,
                 'genre' => $genre
             );
-            if($aired==1)
+            if($aired=='1')
             $aired_temp =  'Completed';
             else
             $aired_temp =  'In progress';
