@@ -49,7 +49,7 @@
                 'genre' => $genre
             );
             $aired_temp =  'Completed';
-            echo $title. ',' . $rating. ',' . $status. ',' . $aired_temp. ',' . $genre;
+            echo $title. ',' . $rating. ',' . $status. ',' . $aired_temp. ',' . $genre .PHP_EOL;
             //Push to "data"
             array_push($entries_arr['data'], $entry_item);
         }
