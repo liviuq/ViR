@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video Review</title>
     <link rel="stylesheet" href="sass/index.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
+   
 <!--    roboto font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +23,7 @@
                 <button type="button" class="button--toggle" onclick="location.href='aboutusViR.php'">About Us</button>
                 <button type="button" class="button--toggle" onclick="location.href='contactViR.html'">Contact</button>
                 <button type="button" class="button--toggle" id="csv__button">CSV</button>
-                <button type="button" class="button--toggle" id="svg__button">SVG</button>
+                <button type="button" class="button--toggle" id="svg__button" onclick="location.href='test_d3.php'">SVG</button>
                 <button type="button" class="button--toggle" id="rss__button">RSS</button>
             </div>
         </div>
