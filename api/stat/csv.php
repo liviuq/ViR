@@ -53,6 +53,7 @@
             $aired_temp =  'Completed';
             else
             $aired_temp =  'In progress';
+            echo gettype($aired);
             echo $title. ',' . $rating. ',' . $status. ',' . $aired_temp. ',' . $genre .PHP_EOL;
             //Push to "data"
             array_push($entries_arr['data'], $entry_item);
