@@ -65,6 +65,19 @@ function parseSVG(){
         //start changing values
         let temp_data = data['data'];
         console.log(temp_data);
+        window.location = "https://vira3.herokuapp.com/test_d3.php";
+
+        
+        const width=800;
+        const height=400;
+        const margin={top: 50, bottom:50, left:50,right:50};
+        
+        const svg= d3.select('#d3-container')
+            .append('svg')
+            .attr('height', height-margin.top - margin.bottom)
+            .attr('width',width-margin.left - margin.right)
+            .attr('viewBox',[0,0,width,height]);
+        
     });
 }
 function showRSS(){

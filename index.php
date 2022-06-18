@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Video Review</title>
     <link rel="stylesheet" href="sass/index.css">
-
+    <script src="https://d3js.org/d3.v7.min.js"></script>
 <!--    roboto font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,5 +38,6 @@
     <script src="js/script.js" defer></script>
     <script src="js/cards.js" defer></script>
     <script src="js/editIndex.js" defer></script>
+    
 </body>
 </html>
