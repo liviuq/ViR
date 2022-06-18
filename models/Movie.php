@@ -283,7 +283,7 @@
              //Execute query
              if($stmt->execute())
              {
-                 return true;
+                 return $stmt;
              }
  
              //Print error if smth goes wrong
@@ -302,7 +302,7 @@
              //Execute query
              if($stmt->execute())
              {
-                 return true;
+                return $stmt;
              }
  
              //Print error if smth goes wrong

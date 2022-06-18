@@ -16,7 +16,13 @@
 
     //movie query
     $result = $movie->csv();
-
+    if($result == false){
+        header('HTTP/1.1 500 Internal Server Error');
+        echo json_encode(array(
+            'message' => 'Internal Server Error'
+        ));
+        die();
+    }
     //Getting row count
     $num = $result->rowCount();
 
