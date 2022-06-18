@@ -275,7 +275,7 @@
             status, 
             aired, 
             name as genre
-            from '.htmlspecialchars(strip_tags($this->table)).' join categories c on movies.created_at = c.created_at';
+            from '.htmlspecialchars(strip_tags($this->table)).' join categories c on movies.genre = c.id';
 
              //Prepare statement
              $stmt = $this->conn->prepare($query);
