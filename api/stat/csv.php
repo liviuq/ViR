@@ -49,11 +49,11 @@
                 'genre' => $genre
             );
             
-            if(strcmp($aired,'1')==0)
-            $aired_temp =  'Completed';
+            if(strcmp($status,'1')==0)
+            $status_temp =  'Completed';
             else
-            $aired_temp =  'In progress';
-            echo $title. ',' . $rating. ',' . $status. ',' . $aired. ',' . $genre .PHP_EOL;
+            $status_temp =  'In progress';
+            echo $title. ',' . $rating. ',' . $status_temp. ',' . $aired. ',' . $genre .PHP_EOL;
             //Push to "data"
             array_push($entries_arr['data'], $entry_item);
         }
