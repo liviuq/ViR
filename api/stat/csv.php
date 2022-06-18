@@ -48,7 +48,10 @@
                 'aired' => $aired,
                 'genre' => $genre
             );
+            if($aired==1)
             $aired_temp =  'Completed';
+            else
+            $aired_temp =  'In progress';
             echo $title. ',' . $rating. ',' . $status. ',' . $aired_temp. ',' . $genre .PHP_EOL;
             //Push to "data"
             array_push($entries_arr['data'], $entry_item);
