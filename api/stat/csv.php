@@ -36,7 +36,7 @@
         //Just in case we want to send more things down the lane
         //I added the cards JSON to the field called 'data'
         $entries_arr['data'] = array();
-
+        echo 'title,rating,status,aired,genre'.PHP_EOL;
         while($row = $result->fetch(PDO::FETCH_ASSOC))
         {
             extract($row);
@@ -48,13 +48,14 @@
                 'aired' => $aired,
                 'genre' => $genre
             );
-
+            $aired_temp = $aired == 1? 'Completed' : 'In progress';
+            echo `${title}, ${rating}, ${status}, ${aired_temp}, ${genre}`;
             //Push to "data"
             array_push($entries_arr['data'], $entry_item);
         }
 
         //Turn to JSON & output
-        echo json_encode($entries_arr);
+       // echo json_encode($entries_arr);
     }
     else
     {

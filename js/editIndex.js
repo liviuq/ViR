@@ -44,15 +44,17 @@ document.getElementById("rss__button")
 .addEventListener("click",showRSS);
 
 function parseCSV(){
-    //fetch the movie with the passed id    
-    fetch(`https://vira3.herokuapp.com/api/stat/csv.php`)
-    .then((res) => res.json())
-    .then((data) =>
-    {   
-        //start changing values
-        let temp_data = data['data'];
-        console.log(temp_data);
-    });
+    //fetch the movie with the passed id 
+    window.location = "https://vira3.herokuapp.com/api/stat/csv.php";   
+    // fetch(`https://vira3.herokuapp.com/api/stat/csv.php`)
+    // .then((res) => res.json())
+    // .then((data) =>
+    // {   
+    //     //start changing values
+    //     let temp_data = data['data'];
+       
+         
+    // });
 }
 function parseSVG(){
     //fetch the movie with the passed id    
