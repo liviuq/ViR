@@ -49,7 +49,7 @@
                 'genre' => $genre
             );
             
-            if(strcmp($aired,"1")==0)
+            if(strcmp($aired,'1')==0)
             $aired_temp =  'Completed';
             else
             $aired_temp =  'In progress';
