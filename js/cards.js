@@ -10,7 +10,7 @@ function getAndDisplayCards()
 
         //display cards by genre
         let i=0;
-        while(i<temp_data.length)
+        while(temp_data.length)
         {
             //get current genre
             let current_genre = temp_data[0]['genre_name'];

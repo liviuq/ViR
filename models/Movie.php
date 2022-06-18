@@ -267,5 +267,28 @@
             printf("Error: %s\n", $stmt->error);
             return false;
         }
+
+        public function csv(){
+            $query='select 
+            title, 
+            rating, 
+            status, 
+            aired, 
+            name as genre
+            from '.htmlspecialchars(strip_tags($this->table)).' join categories c on movies.created_at = c.created_at';
+
+             //Prepare statement
+             $stmt = $this->conn->prepare($query);
+
+             //Execute query
+             if($stmt->execute())
+             {
+                 return true;
+             }
+ 
+             //Print error if smth goes wrong
+             printf("Error: %s\n", $stmt->error);
+             return false;
+        }
     }
 ?>
