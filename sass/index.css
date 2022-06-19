@@ -242,4 +242,7 @@ h2 {
   color: white;
   margin-left: 20px;
 }
+.nav__logo{
+  cursor: pointer;
+}
 /*# sourceMappingURL=index.css.map */
