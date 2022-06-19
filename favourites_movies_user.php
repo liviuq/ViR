@@ -9,7 +9,7 @@
             <pre id="fav__output">
 
             </pre>  
-            <script src="js/favourite_movies_user.js" defer></script>
+            <script src="js/favourites_movies_user.js" defer></script>
 </body> 
 </html>
 
