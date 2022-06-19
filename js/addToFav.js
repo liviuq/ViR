@@ -9,6 +9,8 @@ async function addToFav()
     .find(row => row.startsWith('token='));
     if(cookieValue)
     {
+        
+        cookieValue = cookieValue.split('=')[1];
         const res = await fetch(`https://vira3.herokuapp.com/api/favourite/create.php?id=${id}`, {
             method: "POST",
             headers: {
