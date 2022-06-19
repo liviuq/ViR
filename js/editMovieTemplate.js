@@ -96,6 +96,9 @@ async function submitReview(e){
     const reply = await res.json();
     console.log(reply);
     
+    if(reply.message.localeCompare("Invalid token")==0){
+        alert("You need to be logged in to add to leave a review!")
+    }
     //marcu will do this
 }
 
