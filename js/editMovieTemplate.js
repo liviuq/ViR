@@ -145,4 +145,5 @@ async function getFavJson(){
         var url = 'data:text/json;charset=utf8,' + encodeURIComponent(reply);
         window.open(url, '_blank');
         window.focus();
+        console.log("????");
 }
