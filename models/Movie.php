@@ -292,7 +292,7 @@
         }
         public function svg(){
             $query='select distinct 
-            round(s2.rating),
+            round(s2.rating) as rating,
             (select count(*) from '.htmlspecialchars(strip_tags($this->table)).' s1 
             where round(s1.rating)=round(s2.rating)) as count from '.htmlspecialchars(strip_tags($this->table)).' s2;';
 
