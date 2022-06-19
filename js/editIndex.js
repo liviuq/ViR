@@ -11,16 +11,12 @@ if(cookieValue)
     JWTdecoded = parseJWT(tokenValue);
     let username = JWTdecoded['username'];
 
-        let date = new Date();
-        date.setTime(date.getTime() + (0)); //10 min cookie
-        const expires = date.toUTCString();
-        document.cookie = `token=${body['message']}; expires=${expires}; path=/`;
-    // //instead of login/register, we display user's username
-    // document.getElementById('user__name').innerText = `Hello, ${username}`;
+    //instead of login/register, we display user's username
+    document.getElementById('user__name').innerText = `Hello, ${username}`;
 
-    // //document.getElementById('user__name').setAttribute('onclick', '');
+    //document.getElementById('user__name').setAttribute('onclick', '');
 
-    // document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
+    document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
 }
 else
 {
