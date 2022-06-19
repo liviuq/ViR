@@ -95,7 +95,7 @@ async function submitReview(e){
         });
     const reply = await res.json();
     console.log(reply);
-    if(strcmp(reply,"Invalid token")==0){
+    if(strcmp(reply.message,"Invalid token")==0){
         alert("You need to be logged in to post a review");
     }
     //marcu will do this
