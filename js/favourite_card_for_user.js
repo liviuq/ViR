@@ -33,18 +33,16 @@ async function getAndDisplayCards() {
         document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
     }
     else
-{
-    console.log('cookie undefined');
-}
-
-
+    {
+        console.log('cookie undefined');
+    }
 
     const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_favourites_and_display.php`, {
         method: "GET",
         headers: {
             'Accept': 'application/json',
             'Content-type': 'application/json',
-            'Authorization': `Bearer ${cookieValue}`
+            'Authorization': `Bearer ${cookieValue.split('=')[1]}`
         }
     });
     const reply = await res.json();
