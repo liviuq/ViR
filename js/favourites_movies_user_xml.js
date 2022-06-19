@@ -23,7 +23,7 @@ const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_fav
 }
 getFavJson();
 function OBJtoXML(obj) {
-    var xml = '<favourites>';
+    var xml = '';
     for (var prop in obj) {
       xml += obj[prop] instanceof Array ? '' : "<" + prop + ">";
       if (obj[prop] instanceof Array) {
@@ -39,7 +39,6 @@ function OBJtoXML(obj) {
       }
       xml += obj[prop] instanceof Array ? '' : "</" + prop + ">";
     }
-    xml+='</favourites>';
     var xml = xml.replace(/<\/?[0-9]{1,}>/g, '');
     return xml
   }
