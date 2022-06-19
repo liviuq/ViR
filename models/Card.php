@@ -39,7 +39,7 @@
         }
 
         //getfav for user
-        public function read_user_favourites_and_diplay($username)
+        public function read_user_favourites_and_display($username)
         {
             //query
             $query = '
