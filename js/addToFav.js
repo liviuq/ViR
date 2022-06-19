@@ -1,8 +1,3 @@
-//get the ID we pass in the URL
-const urlParam = new URLSearchParams(window.location.search);
-
-const id = urlParam.get('id');
-
 document.getElementById('addfav__button')
 .addEventListener('click', addToFav);
 
