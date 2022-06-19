@@ -73,6 +73,7 @@
 
             return $stmt;
         }
+        
 
         //Create favourite
         public function create()

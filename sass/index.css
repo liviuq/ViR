@@ -245,4 +245,9 @@ h2 {
 .nav__logo{
   cursor: pointer;
 }
+.card__opt__remove{
+  display: flex;
+  flex-direction: row;
+  
+}
 /*# sourceMappingURL=index.css.map */
