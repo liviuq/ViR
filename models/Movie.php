@@ -292,9 +292,9 @@
         }
         public function svg(){
             $query='select distinct 
-            s2.rating,
+            round( s2.rating,0),
             (select count(*) from '.htmlspecialchars(strip_tags($this->table)).' s1 
-            where s1.rating=s2.rating) as count from '.htmlspecialchars(strip_tags($this->table)).' s2;';
+            where round(s1.rating,0)=round(s2.rating,0)) as count from '.htmlspecialchars(strip_tags($this->table)).' s2;';
 
              //Prepare statement
              $stmt = $this->conn->prepare($query);
