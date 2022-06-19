@@ -94,10 +94,10 @@ async function submitReview(e){
             body:JSON.stringify({body:body, rating:rating})
         });
     const reply = await res.json();
-    console.log(reply);
-    if(strcmp(reply.message,"Invalid token")==0){
-        alert("You need to be logged in to post a review");
-    }
+    console.log(reply.message);
+    // if(strcmp(reply.message,"Invalid token")==0){
+    //     alert("You need to be logged in to post a review");
+    // }
     //marcu will do this
 }
 
