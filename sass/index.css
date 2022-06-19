@@ -248,6 +248,10 @@ h2 {
 .card__opt__remove{
   display: flex;
   flex-direction: row;
-  
+
+}
+.flex__vert{
+  display: flex;
+  flex-direction: column;
 }
 /*# sourceMappingURL=index.css.map */

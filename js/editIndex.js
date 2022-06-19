@@ -90,3 +90,7 @@ document.getElementById('search__bar')
         window.location = `https://vira3.herokuapp.com/search.html?string=${document.getElementById('search__bar').value}`;
     }
 });
+
+
+
+

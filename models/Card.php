@@ -38,6 +38,36 @@
             return $stmt;
         }
 
+        //getfav for user
+        public function read_user_favourites_and_diplay($username)
+        {
+            //query
+            $query = '
+            select 
+                m.id,
+                m.banner 
+            from ' . htmlspecialchars(strip_tags($this->table)) . ' m
+            join favourites f on f.movie_id= m.id
+            where f.user_id=(select id from users where username = :username)
+            ';
+
+            //Prepare statement
+            $stmt = $this->conn->prepare($query);
+
+            //$stmt->debugDumpParams();
+
+            //Clean data
+            $username = htmlspecialchars(strip_tags($username));
+
+            //Bind data
+            $stmt->bindParam(':username', $username);
+
+            //Execute query
+            $stmt->execute();
+
+            return $stmt;
+        }
+
         //Get cards related to the search box
         public function search($string)
         {

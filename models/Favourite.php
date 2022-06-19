@@ -5,7 +5,7 @@
         //DB stuff
         private $conn;
         private $table = 'favourites';
-
+        
         //Favourites properties
         public $id;
         public $user_id;
@@ -73,6 +73,7 @@
 
             return $stmt;
         }
+       
         
 
         //Create favourite
