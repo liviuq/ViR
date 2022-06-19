@@ -36,7 +36,7 @@ fetch(`https://vira3.herokuapp.com/api/movie/read_single.php?id=${id}`)
         let temp_data = data['data'];
          
         temp_data.forEach(element => {
-            console.log(element);
+            //console.log(element);
             const div = document.createElement('div');
             div.setAttribute('class', 'comment');
 
