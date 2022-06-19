@@ -7,7 +7,7 @@ const id = urlParameters.get('id');
 document.getElementById('addfav__button')
 .addEventListener('click', addToFav);
 
-function addToFav()
+async function addToFav()
 {
     //check to see if we have the token
     const cookieValue = document.cookie
