@@ -120,7 +120,9 @@ async function addToFav()
         const reply = await res.json();
         console.log(reply);
     
-        if(strcmp(reply,"Invalid token")==0){
+
+        //string_a.localeCompare(string_b)
+        if(reply.message.localeCompare("Invalid token")==0){
             alert("You need to be logged in to add to favorite!")
         }
 }
