@@ -83,3 +83,10 @@ function parseSVG(){
 function showRSS(){
     window.location = "https://vira3.herokuapp.com/api/rss/rss.php";
 }
+
+document.getElementById('search__bar')
+.addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+        window.location = `https://vira3.herokuapp.com/search.html?string=${document.getElementById('search__bar').value}`;
+    }
+});
