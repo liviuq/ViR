@@ -19,7 +19,7 @@ const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_fav
     let output = OBJtoXML(reply);
     console.log(output);
     // var str= JSON.stringify(reply);
-     document.body.appendChild(document.createElement("pre")).innerHTML=output;
+     document.body.appendChild(document.createElement("pre")).innerText=output;
 }
 getFavJson();
 function OBJtoXML(obj) {
