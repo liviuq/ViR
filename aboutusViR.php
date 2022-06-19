@@ -22,6 +22,8 @@
                 Let me present myself as the writer of this document, Andrew. I am a
                 21 years old Computer Science student at Al. I. Cuza University in Iasi
                 and I like to read science fiction books in my spare time.
+                <br>
+                My teammate is Marcu Eduard, he likes sleep.
             </div>
             <a href="index.php">Go back to the movies</a>
         </div>
