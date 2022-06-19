@@ -16,7 +16,29 @@ const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_fav
     const reply = await res.json();
     console.log(reply);
 
+    var output = eval("OBJtoXML("+reply+");")
     // var str= JSON.stringify(reply);
     // document.body.appendChild(document.createElement("pre")).innerHTML=str;
 }
 getFavJson();
+function OBJtoXML(obj) {
+    var xml = '';
+    for (var prop in obj) {
+      xml += obj[prop] instanceof Array ? '' : "<" + prop + ">";
+      if (obj[prop] instanceof Array) {
+        for (var array in obj[prop]) {
+          xml += "<" + prop + ">";
+          xml += OBJtoXML(new Object(obj[prop][array]));
+          xml += "</" + prop + ">";
+        }
+      } else if (typeof obj[prop] == "object") {
+        xml += OBJtoXML(new Object(obj[prop]));
+      } else {
+        xml += obj[prop];
+      }
+      xml += obj[prop] instanceof Array ? '' : "</" + prop + ">";
+    }
+    var xml = xml.replace(/<\/?[0-9]{1,}>/g, '');
+    return xml
+  }
+  console.log(output);
