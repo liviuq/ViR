@@ -120,3 +120,25 @@ async function addToFav()
         console.log(reply);
     
 }
+
+document.getElementById('getfav__button__json')
+.addEventListener('click', getFavJson);
+
+async function getFavJson(){
+    const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('token='))
+        ?.split('=')[1];
+
+
+    const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_favourites.php`, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-type':'application/json',
+            'Authorization': `Bearer ${cookieValue}`
+        }
+        });
+        const reply = await res.json();
+        console.log(reply);
+}
