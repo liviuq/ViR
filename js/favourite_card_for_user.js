@@ -13,24 +13,25 @@ function parseJWT(token) {
 };
 
 async function getAndDisplayCards() {
+    
     const cookieValue = document.cookie
-    .split('; ')
-    .find(row => row.startsWith('token='));
-if (cookieValue) {
-    //we have the cookie
-    tokenValue = cookieValue.split('=')[1];
+        .split('; ')
+        .find(row => row.startsWith('token='));
+    if (cookieValue) {
+        //we have the cookie
+        tokenValue = cookieValue.split('=')[1];
 
-    //decode the cookie
-    JWTdecoded = parseJWT(tokenValue);
-    let username = JWTdecoded['username'];
+        //decode the cookie
+        JWTdecoded = parseJWT(tokenValue);
+        let username = JWTdecoded['username'];
 
-    //instead of login/register, we display user's username
-    document.getElementById('user__name').innerText = `Hello, ${username}`;
+        //instead of login/register, we display user's username
+        document.getElementById('user__name').innerText = `Hello, ${username}`;
 
-    //document.getElementById('user__name').setAttribute('onclick', '');
+        //document.getElementById('user__name').setAttribute('onclick', '');
 
-    document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
-}
+        document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
+    }
 
 
     const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_favourites_and_display.php`, {
