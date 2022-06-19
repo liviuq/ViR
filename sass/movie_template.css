@@ -122,9 +122,7 @@ body {
   top: 0;
   width: 100%;
 }
-.nav__logo{
-  cursor: pointer;
-}
+
 .nav__black {
   background-color: #111;
 }
@@ -133,6 +131,7 @@ body {
   width: 80px;
   -o-object-fit: contain;
   object-fit: contain;
+  cursor: pointer;
 }
 
 h1 {
