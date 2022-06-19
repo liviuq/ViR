@@ -13,7 +13,7 @@
 </head>
 <body>
         <div class="nav" id="nav">
-            <img src="img/test_icon.png" alt="vir_icon" class="nav__logo">
+            <img src="img/test_icon.png" alt="vir_icon" class="nav__logo" onclick="location.href='index.php'">
             <div class="wrapper">
                 <img class="wrapper__search" src="img/search_icon.png" alt="search"/>
                 <input class="search" placeholder="Search" type="text" >

@@ -122,7 +122,9 @@ body {
   top: 0;
   width: 100%;
 }
-
+.nav__logo{
+  cursor: pointer;
+}
 .nav__black {
   background-color: #111;
 }
