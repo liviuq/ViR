@@ -121,8 +121,8 @@ async function addToFav()
     
 }
 
-document.getElementById('getfav__button__json')
-.addEventListener('click', getFavJson);
+// document.getElementById('getfav__button__json')
+// .addEventListener('click', getFavJson);
 
 async function getFavJson(){
     // const cookieValue = document.cookie
