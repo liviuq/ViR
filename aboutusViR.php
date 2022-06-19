@@ -23,7 +23,7 @@
                 21 years old Computer Science student at Al. I. Cuza University in Iasi
                 and I like to read science fiction books in my spare time.
                 <br>
-                My teammate is Marcu Eduard, he likes sleep.
+                My teammate is Marcu Eduard, he likes sleeping.
             </div>
             <a href="index.php">Go back to the movies</a>
         </div>
