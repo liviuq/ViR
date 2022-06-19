@@ -16,11 +16,11 @@
         <div class="item__text">
             <h1>Nice to meet you!</h1>
             <div class="text__intro">
-                Hi! We are a team of two curious individuals who are working together
+                Hi! We are a team of two curious Computer Science students at Al. I. Cuza University in Iasi, who are working together
                 to create our first full-fledged website.
                 <br>
-                Let me present myself as the writer of this document, Andrew. I am a
-                21 years old Computer Science student at Al. I. Cuza University in Iasi
+                Let me present myself as the writer of this document, Andrew. I am
+                21 years old 
                 and I like to read science fiction books in my spare time.
                 <br>
                 My teammate is Marcu Eduard, he likes sleeping.
