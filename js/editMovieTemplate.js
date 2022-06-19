@@ -142,8 +142,7 @@ async function getFavJson(){
         const reply = await res.json();
         console.log(reply);
 
-        var something;
-        something = window.open("data:text/json," + encodeURIComponent(reply),
-                       "_blank");
-        something.focus();
+        var url = 'data:text/json;charset=utf8,' + encodeURIComponent(reply);
+        window.open(url, '_blank');
+        window.focus();
 }
