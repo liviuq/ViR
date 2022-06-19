@@ -94,10 +94,8 @@ async function submitReview(e){
             body:JSON.stringify({body:body, rating:rating})
         });
     const reply = await res.json();
-    console.log(reply.message);
-    // if(strcmp(reply.message,"Invalid token")==0){
-    //     alert("You need to be logged in to post a review");
-    // }
+    console.log(reply);
+    
     //marcu will do this
 }
 
@@ -122,6 +120,9 @@ async function addToFav()
         const reply = await res.json();
         console.log(reply);
     
+        if(strcmp(reply,"Invalid token")==0){
+            alert("You need to be logged in to add to favorite!")
+        }
 }
 
 // document.getElementById('getfav__button__json')
