@@ -17,6 +17,7 @@ const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_fav
     console.log(reply);
 
     var output = eval("OBJtoXML("+reply+");")
+    console.log(output);
     // var str= JSON.stringify(reply);
     // document.body.appendChild(document.createElement("pre")).innerHTML=str;
 }
@@ -41,4 +42,4 @@ function OBJtoXML(obj) {
     var xml = xml.replace(/<\/?[0-9]{1,}>/g, '');
     return xml
   }
-  console.log(output);
+ 
