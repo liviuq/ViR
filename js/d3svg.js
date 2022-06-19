@@ -21,8 +21,14 @@ fetch(`https://vira3.herokuapp.com/api/stat/svg.php`)
             .range([margin.left, width - margin.right])
             .padding(0.1)
         
+        var aux =0;
+        for(i=0;i<temp_data.length;i++){
+            if(temp_data[i].count>aux){
+                aux=temp_data[i].count;
+            }
+        }
         const y = d3.scaleLinear()
-            .domain([0, 4])
+            .domain([0, aux])
             .range([height - margin.bottom, margin.top])
 
         svg
