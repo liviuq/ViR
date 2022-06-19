@@ -13,7 +13,7 @@ function parseJWT(token) {
 };
 
 async function getAndDisplayCards() {
-    
+
     const cookieValue = document.cookie
         .split('; ')
         .find(row => row.startsWith('token='));
@@ -32,6 +32,11 @@ async function getAndDisplayCards() {
 
         document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
     }
+    else
+{
+    console.log('cookie undefined');
+}
+
 
 
     const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_favourites_and_display.php`, {
