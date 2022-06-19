@@ -141,4 +141,9 @@ async function getFavJson(){
         });
         const reply = await res.json();
         console.log(reply);
+
+        var something;
+        something = window.open("data:text/json," + encodeURIComponent(reply),
+                       "_blank");
+        something.focus();
 }
