@@ -1,5 +1,19 @@
 //every time this page is loaded, display all cards on screen
-const cookieValue = document.cookie
+
+
+
+function parseJWT(token) {
+    var base64Url = token.split('.')[1];
+    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+
+    return JSON.parse(jsonPayload);
+};
+
+async function getAndDisplayCards() {
+    const cookieValue = document.cookie
     .split('; ')
     .find(row => row.startsWith('token='));
 if (cookieValue) {
@@ -17,23 +31,6 @@ if (cookieValue) {
 
     document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
 }
-
-
-function parseJWT(token) {
-    var base64Url = token.split('.')[1];
-    var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    var jsonPayload = decodeURIComponent(atob(base64).split('').map(function (c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-
-    return JSON.parse(jsonPayload);
-};
-
-async function getAndDisplayCards() {
-    const cookieValue = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('token='))
-        ?.split('=')[1];
 
 
     const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_favourites_and_display.php`, {
