@@ -70,8 +70,12 @@ document.getElementById('search__bar')
 });
 
 //add event listener for click on  logout button: id="logout__button"
-document.getElementById('logout__button')
-.addEventListener('click', logout);
+const element = document.getElementById('logout__button');
+if(element != null)
+{
+    element.addEventListener('click', logout);
+}
+
 
 function logout()
 {
