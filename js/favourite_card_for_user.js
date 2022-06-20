@@ -35,31 +35,33 @@ async function getAndDisplayCardsFavourites()
         let temp_data = reply['data'];
 
         //creating the div s
-        let i = 0;
-        while(i < temp_data.length)
-        {
-            //created the row div
-            const div = document.createElement('div');
-            div.setAttribute('class', 'row');
 
-            //create the movie card list
-            const cardsrow = document.createElement('div');
-            cardsrow.setAttribute('class', 'row__posters');
+        //created the row div
+        const div = document.createElement('div');
+        div.setAttribute('class', 'row');
 
-            //loop through the cards and add them to the row
-            let cards = '';
-            temp_data.forEach(element => {
-                cards += `<img src="${element['banner']}" class="row__poster" onclick="location.href='movie_template.html?id=${element['id']}'" alt="${element['id']}" width="200" height="400">`;
-            });
-            console.log(cards);
-            //setting the cards
-            cardsrow.innerHTML = cards;
+        //create the h2
+        const h2 = document.createElement('h2');
+        h2.innerText = 'Your favourite movies!';
 
-            //appending the elements together
-            div.appendChild(cardsrow);
-            document.querySelector('body').appendChild(div);
-            i++;
-        }
+        //create the movie card list
+        const cardsrow = document.createElement('div');
+        cardsrow.setAttribute('class', 'row__posters');
+
+        //loop through the cards and add them to the row
+        let cards = '';
+        temp_data.forEach(element => {
+            cards += `<img src="${element['banner']}" class="row__poster" onclick="location.href='movie_template.html?id=${element['id']}'" alt="${element['id']}" width="200" height="400">`;
+        });
+        console.log(cards);
+        //setting the cards
+        cardsrow.innerHTML = cards;
+
+        //appending the elements together
+        div.appendChild(h2);
+        div.appendChild(cardsrow);
+        document.querySelector('body').appendChild(div);
+        
     }
     else
     {
