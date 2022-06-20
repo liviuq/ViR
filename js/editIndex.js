@@ -23,6 +23,7 @@ if(cookieValue)
     button.setAttribute('type', 'button');
     button.setAttribute('class', 'button--toggle');
     button.setAttribute('id', 'logout__button');
+    button.setAttribute('onclick', "location.href='index.php'");
     button.innerText = 'Logout';
 
     //append the button to header__buttons
