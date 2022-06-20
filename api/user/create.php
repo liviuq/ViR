@@ -34,7 +34,7 @@
     else
     {
         //User not registered
-        header('HTTP/1.1 500 Internal Server Error');
+        header('HTTP/1.1 406 Not Acceptable');
         echo json_encode(
             array('message' => 'User not registered')
         );
