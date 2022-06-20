@@ -22,9 +22,10 @@ function register(e)
             document.getElementById('reg_error').classList.add("register_neutral");
           }, 2000);
     }
-
-    //post the data to the address
-    fetch('https://vira3.herokuapp.com/api/user/create.php', {
+    else
+    {
+        //post the data to the address
+        fetch('https://vira3.herokuapp.com/api/user/create.php', {
         method: "POST",
         headers: {
             'Accept': 'application/json, text/plain, */*',
@@ -59,4 +60,5 @@ function register(e)
                   }, 2000);
             }
         })
+    }
 }
