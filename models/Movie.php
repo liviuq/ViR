@@ -28,6 +28,13 @@
         }
 
         //Get Movies
+        /**
+         * @OA\Get(
+         *     path="/api/movie/read.php", tags={"Movies"},
+         *     @OA\Response(response="200", description="Movies in JSON"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function read()
         {
             //change name table 'categories' to 'genres'
@@ -64,6 +71,12 @@
 
         //check the id (html_cpecial_char, strip, PDO::PARAM_INT, check to see if it s in bd first)
         //Get Single Movie by ID
+        /**
+         * @OA\Get(
+         *     path="/api/movie/read_single.php", tags={"Movies"},
+         *     @OA\Response(response="200", description="OK")
+         * )
+         */
         public function read_single()
         {
             //Create the query
@@ -116,6 +129,14 @@
         }
 
         //Create Movie
+        /**
+         * @OA\Post(
+         *     path="/api/movie/create.php", tags={"Movies"},
+         *     summary="Creates a movie",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="500", description="Internal server error")
+         * )
+         */
         public function create()
         {
             //Create query
@@ -185,6 +206,14 @@
         }
 
         //Update Movie
+        /**
+         * @OA\Put(
+         *     path="/api/movie/update.php", tags={"Movies"},
+         *     summary="updates a movie",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="400", description="Bad Request")
+         * )
+         */
         public function update()
         {
             //Create query
@@ -242,6 +271,14 @@
         }
 
         //Delete Movie
+        /**
+         * @OA\Delete(
+         *     path="/api/movie/delete.php", tags={"Movies"},
+         *     summary="Deletes a movie",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="400", description="Bad Request")
+         * )
+         */
         public function delete()
         {
             //Create query
@@ -268,6 +305,15 @@
             return false;
         }
 
+        /**
+         * @OA\Get(
+         *     path="/api/stat/csv.php", tags={"Stats"},
+         *     summary="Returns a CSV with the movies",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="500", description="Internal Server Error"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function csv(){
             $query='select 
             title, 
@@ -290,6 +336,16 @@
              printf("Error: %s\n", $stmt->error);
              return false;
         }
+
+        /**
+         * @OA\Get(
+         *     path="/api/stat/csv.php", tags={"Stats"},
+         *     summary="Returns a CSV with the movies",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="500", description="Internal Server Error"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function svg(){
             $query='select distinct 
             round(s2.rating) as rating,

@@ -51,11 +51,13 @@
         }
 
         //Turn to JSON & output
+        header('HTTP/1.1 200 OK');
         echo json_encode($cards_arr);
     }
     else
     {
-        //no movies
+        //no movie cards
+        header('HTTP/1.1 204 No Content');
         echo json_encode(array(
             'message' => 'Search query gave 0 results'
         ));

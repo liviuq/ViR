@@ -30,7 +30,7 @@
     if($num > 0)
     {
         
-
+        header('HTTP/1.1 200 OK');
         //Initialize entries array
         $entries_arr = array();
         //Just in case we want to send more things down the lane
@@ -64,6 +64,7 @@
     else
     {
         //no entries
+        header('HTTP/1.1 204 No Content');
         echo json_encode(array(
             'message' => 'No entries found'
         ));

@@ -45,11 +45,13 @@
         }
 
         //Turn to JSON & output
+        header('HTTP/1.1 200 OK');
         echo json_encode($cards_arr);
     }
     else
     {
-        //no movies
+        //no cards
+        header('HTTP/1.1 204 No Content');
         echo json_encode(array(
             'message' => 'No cards found'
         ));

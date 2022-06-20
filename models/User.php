@@ -18,7 +18,15 @@
             $this->conn = $db;
         }
         
-        //Register user (POST)   
+        //Register user (POST)  
+        /**
+         * @OA\Post(
+         *     path="/api/user/create.php", tags={"users"},
+         *     summary="Creates a user",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="500", description="Internal Server Error")
+         * )
+         */ 
         public function register()
         {
             //check to see if there are any users matching the email or username

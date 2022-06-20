@@ -51,11 +51,13 @@
         }
 
         //Turn to JSON & output
+        header('HTTP/1.1 200 OK');
         echo json_encode($entries_arr);
     }
     else
     {
         //no entries
+        header('HTTP/1.1 204 No Content');
         echo json_encode(array(
             'message' => 'No entries found'
         ));

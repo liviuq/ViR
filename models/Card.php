@@ -18,6 +18,14 @@
         }
 
         //Get all cards
+        /**
+         * @OA\Get(
+         *     path="/api/card/read.php", tags={"Cards"},
+         *     summary="Returns all movie cards",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function read()
         {
             //Create query
@@ -39,6 +47,14 @@
         }
 
         //getfav for user
+        /**
+         * @OA\Get(
+         *     path="/api/card/read.php", tags={"Favourites"},
+         *     summary="Returns all user's favourites in card format",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function read_user_favourites_and_display($username)
         {
             //query
@@ -67,6 +83,14 @@
         }
 
         //Get cards related to the search box
+        /**
+         * @OA\Get(
+         *     path="/api/card/search.php", tags={"Search"},
+         *     summary="Returns all matching movies in card format",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function search($string)
         {
             //Create query

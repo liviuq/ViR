@@ -33,6 +33,7 @@
     if($movie->create())
     {
         //Movie created
+        header('HTTP/1.1 200 OK');
         echo json_encode(
             array('message' => 'Movie created')
         );
@@ -40,6 +41,7 @@
     else
     {
         //Movie not created
+        header('HTTP/1.1 500 Internal server error');
         echo json_encode(
             array('message' => 'Movie not created')
         );

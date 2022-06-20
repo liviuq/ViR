@@ -26,6 +26,7 @@
     if($user->register())
     {
         //user registered successfully
+        header('HTTP/1.1 200 OK');
         echo json_encode(
             array('message' => 'User registered')
         );
@@ -33,6 +34,7 @@
     else
     {
         //User not registered
+        header('HTTP/1.1 500 Internal Server Error');
         echo json_encode(
             array('message' => 'User not registered')
         );

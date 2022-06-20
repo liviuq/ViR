@@ -54,11 +54,13 @@
          }
  
          //Turn to JSON & output
+         header('HTTP/1.1 200 OK');
          echo json_encode($review_arr);
      }
      else
      {
          //no review
+         header('HTTP/1.1 204 No Content');
          echo json_encode(array(
              'message' => 'No reviews found'
          ));

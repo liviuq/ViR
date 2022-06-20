@@ -49,6 +49,14 @@
         }
 
         //Get user favourites
+        /**
+         * @OA\Get(
+         *     path="/api/favourite/read_user_favourites.php", tags={"Favourites"},
+         *     summary="Returns user's favourite movies",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function read_user_favourites()
         {
             //query
@@ -77,6 +85,16 @@
         
 
         //Create favourite
+        /**
+         * @OA\Post(
+         *     path="/api/favourite/create.php", tags={"Favourites"},
+         *     summary="Creates user's favourite movie",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="404", description="Not Found"),
+         *     @OA\Response(response="500", description="Internal Server Error"),
+         *     @OA\Response(response="409", description="Conflict")
+         * )
+         */
         public function create()
         {
             //first check to see if the movie is already in user's fav list
@@ -130,6 +148,17 @@
         }
 
         //Delete favourite
+        /**
+         * @OA\Delete(
+         *     path="/api/favourite/delete.php", tags={"Favourites"},
+         *     summary="Deletes a favourite",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="401", description="Unauthorized"),
+         *     @OA\Response(response="400", description="Bad Request"),
+         *     @OA\Response(response="404", description="Not Found"),
+         *     @OA\Response(response="500", description="Internal Server Error"),
+         * 
+         */
         public function delete()
         {
             //Create query

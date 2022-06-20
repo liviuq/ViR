@@ -36,6 +36,7 @@
     if($movie->update())
     {
         //Movie updated
+        header('HTTP/1.1 200 OK');
         echo json_encode(
             array('message' => 'Movie updated')
         );
@@ -43,6 +44,7 @@
     else
     {
         //Movie not updated
+        header('HTTP/1.1 400 Bad Request');
         echo json_encode(
             array('message' => 'Movie not updated')
         );

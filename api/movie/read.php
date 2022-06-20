@@ -55,6 +55,7 @@
         }
 
         //Turn to JSON & output
+        header('HTTP/1.1 200 OK');
         echo json_encode($movies_arr);
     }
     else

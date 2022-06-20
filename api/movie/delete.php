@@ -25,6 +25,7 @@
     if($movie->delete())
     {
         //Movie deleted
+        header('HTTP/1.1 200 OK');
         echo json_encode(
             array('message' => 'Movie deleted')
         );
@@ -32,6 +33,7 @@
     else
     {
         //Movie not deleted
+        header('HTTP/1.1 400 Bad Request');
         echo json_encode(
             array('message' => 'Movie not deleted')
         );

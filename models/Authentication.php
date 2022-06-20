@@ -3,6 +3,15 @@
 use Firebase\JWT\JWT;
 use Firebase\JWT\Key;
 
+/**
+ * @OA\Info(
+ *   title="VIR API",
+ *   version="1.0.0",
+ *   @OA\Contact(
+ *     email="petrache.andrei1@gmail.com"
+ *   )
+ * )
+ */
 class Authentication
 {
     //DB stuff
@@ -32,6 +41,16 @@ class Authentication
     }
 
     //only post the username and password
+    
+    /**
+     * @OA\Post(
+     *     path="/api/stat/csv.php", tags={"Stats"},
+     *     summary="Returns a CSV with the movies",
+     *     @OA\Response(response="200", description="OK"),
+     *     @OA\Response(response="401", description="Unauthorized"),
+     *     @OA\Response(response="500", description="Internal Server Error")
+     * )
+     */
     public function processRequest()
     {
         //return values

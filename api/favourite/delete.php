@@ -64,6 +64,7 @@
     if($fav->delete())
     {
         //Favourite deleted
+        header('HTTP/1.1 200 OK');
         echo json_encode(
             array('message' => 'Favourite deleted')
         );
@@ -71,6 +72,7 @@
     else
     {
         //Favourite not deleted
+        header('HTTP/1.1 500 Internal Server Error');
         echo json_encode(
             array('message' => 'Favourite not deleted')
         );

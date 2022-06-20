@@ -15,6 +15,14 @@
             $this->conn = $db;
         }
 
+        /**
+         * @OA\Get(
+         *     path="/api/review/read_movie_reviews.php", tags={"Reviews"},
+         *     summary="Returns movie's reviews",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="204", description="No Content")
+         * )
+         */
         public function read_movie_reviews()
         {
             $query = '
@@ -38,7 +46,16 @@
             return $stmt;
         }
 
-        //publish a review 
+        //publish a review
+        /**
+         * @OA\Post(
+         *     path="/api/review/create.php", tags={"Favourites"},
+         *     summary="Creates a review on the specified movie",
+         *     @OA\Response(response="200", description="OK"),
+         *     @OA\Response(response="404", description="Not Found"),
+         *     @OA\Response(response="500", description="Internal Server Error")
+         * )
+         */
         public function create($username)
         {
             //Query to insert review

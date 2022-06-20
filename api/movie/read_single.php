@@ -37,5 +37,6 @@
     );
 
     //Convert to JSON
+    header('HTTP/1.1 200 OK');
     print_r(json_encode($movie_arr));
 ?>
