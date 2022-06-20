@@ -36,7 +36,7 @@
                 r.created_at
             from ' . htmlspecialchars(strip_tags($this->table)) . ' r
             left join users u on u.id = r.user_id
-            where r.movie_id = :movie_id
+            where r.movie_id = :movie_id and length(r.body)!=0
             order by r.created_at desc';
 
             $stmt = $this->conn->prepare($query);
