@@ -23,7 +23,7 @@
                 <input id="reg_username" type="text" name="username" class="form__input" placeholder="User ID" required>
                 <input id="reg_email" type="email" name="email" class="form__input" placeholder="Email Address" required>
                 <input id="reg_password" type="password" name="password" class="form__input" placeholder="Enter Password" required>
-                <input type="checkbox" class="form__checkbox"><span>I agree to the terms and conditions</span>
+                <input type="checkbox" class="form__checkbox" required><span>I agree to the terms and conditions</span>
                 <button id="register_button" type="submit" class="form__submitbutton">Register</button>
             </form>
             <div class="form__logo">

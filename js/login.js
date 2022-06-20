@@ -9,7 +9,24 @@ async function login(e)
     //get username and password
     let username = document.getElementById('login_username').value;
     let password = document.getElementById('login_password').value;
+    if(username.length == 0 || password.length == 0)
+    {
+        //flash wrong username or password
+        document.getElementById('login_message').classList.remove("register_bad");
+        document.getElementById('login_message').classList.remove("register_neutral");
+        document.getElementById('login_message').classList.remove("register_good");
 
+        document.getElementById('login_message').innerText = 'Wrong username or password';
+        document.getElementById('login_message').classList.add("register_bad");
+
+        //remove error
+        setTimeout(function(){
+            document.getElementById('login_message').classList.remove("register_bad");
+            document.getElementById('login_message').classList.remove("register_neutral");
+            document.getElementById('login_message').classList.remove("register_good");
+            document.getElementById('login_message').classList.add("register_neutral");
+          }, 2000);
+    }
     //post the data to the address
     //thanks Marius for the await tips n tricks
     const res = await fetch('https://vira3.herokuapp.com/api/authentication/login.php', {
