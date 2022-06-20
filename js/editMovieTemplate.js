@@ -136,3 +136,32 @@ async function addToFav()
 async function getFavJson(){
     window.location = "https://vira3.herokuapp.com/favourite_movies_user.php";
 }
+
+//add remove from fav functionality
+document.getElementById('rmfav__button')
+.addEventListener('click', rmFromFav);
+
+async function rmFromFav()
+{
+    //check to see if we have the token
+    const cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('token='))
+        ?.split('=')[1];
+    const res = await fetch(`https://vira3.herokuapp.com/api/favourite/delete.php?id=${id}`, {
+        method: "POST",
+        headers: {
+            'Accept': 'application/json',
+            'Content-type':'application/json',
+            'Authorization': `Bearer ${cookieValue}`
+        }
+        });
+        const reply = await res.json();
+        console.log(reply);
+    
+
+        //string_a.localeCompare(string_b)
+        if(reply.message.localeCompare("Favourite not deleted")==0){
+            alert("You need to be logged in to delete from favorites!")
+        }
+}
