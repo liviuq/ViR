@@ -29,8 +29,7 @@ async function getAndDisplayCardsFavourites()
         }
         });
         const reply = await res.json();
-        console.log(reply);
-
+        
         //constructing the favourite row
         let temp_data = reply['data'];
 

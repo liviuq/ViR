@@ -94,11 +94,11 @@ async function submitReview(e){
             body:JSON.stringify({body:body, rating:rating})
         });
     const reply = await res.json();
-    console.log(reply);
     
     if(reply.message.localeCompare("Invalid token")==0){
         alert("You need to be logged in to add to leave a review!")
     }
+    document.location.reload(true);
     //marcu will do this
 }
 
@@ -134,26 +134,5 @@ async function addToFav()
 // .addEventListener('click', getFavJson);
 
 async function getFavJson(){
-    // const cookieValue = document.cookie
-    //     .split('; ')
-    //     .find(row => row.startsWith('token='))
-    //     ?.split('=')[1];
-
-
-    // const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_favourites.php`, {
-    //     method: "POST",
-    //     headers: {
-    //         'Accept': 'application/json',
-    //         'Content-type':'application/json',
-    //         'Authorization': `Bearer ${cookieValue}`
-    //     }
-    //     });
-    //     const reply = await res.json();
-    //     console.log(reply);
-
-    //     var url = 'data:text/json;charset=utf8,' + encodeURIComponent(JSON.stringify(reply));
-    //     window.open(url, '_blank');
-    //     window.focus();
-    //     console.log("????");
     window.location = "https://vira3.herokuapp.com/favourite_movies_user.php";
 }

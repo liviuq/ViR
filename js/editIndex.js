@@ -17,6 +17,17 @@ if(cookieValue)
     //document.getElementById('user__name').setAttribute('onclick', '');
 
     document.getElementById('user__name').setAttribute('onclick', "location.href='user_template.html'");
+    
+    //create the logout button
+    const button = document.createElement('button');
+    button.setAttribute('type', 'button');
+    button.setAttribute('class', 'button--toggle');
+    button.setAttribute('id', 'logout__button');
+    button.innerText = 'Logout';
+
+    //append the button to nav__buttons
+    document.getElementById('nav__buttons')
+    .appendChild(button);
 }
 else
 {
@@ -59,5 +70,14 @@ document.getElementById('search__bar')
 });
 
 //add event listener for click on  logout button: id="logout__button"
+document.getElementById('logout__button')
+.addEventListener('click', logout);
+
+function logout()
+{
+    //this only sets the cookie exp time to a past time
+    document.cookie = "token=old; expires=Sat, 20 Jan 1980 12:00:00 UTC";
+    document.location.reload(true);
+}
 
 
