@@ -36,7 +36,7 @@ async function getAndDisplayCardsFavourites()
 
         //creating the div s
         let i = 0;
-        while(temp_data.length)
+        while(i < temp_data.length)
         {
             //created the row div
             const div = document.createElement('div');
@@ -51,13 +51,14 @@ async function getAndDisplayCardsFavourites()
             temp_data.forEach(element => {
                 cards += `<img src="${element['banner']}" class="row__poster" onclick="location.href='movie_template.html?id=${element['id']}'" alt="${element['id']}" width="200" height="400">`;
             });
-
+            console.log(cards);
             //setting the cards
             cardsrow.innerHTML = cards;
 
             //appending the elements together
             div.appendChild(cardsrow);
             document.querySelector('body').appendChild(div);
+            i++;
         }
     }
     else

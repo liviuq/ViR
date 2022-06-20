@@ -58,6 +58,6 @@ document.getElementById('search__bar')
     }
 });
 
-
+//add event listener for click on  logout button: id="logout__button"
 
 
