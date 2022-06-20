@@ -25,8 +25,8 @@ if(cookieValue)
     button.setAttribute('id', 'logout__button');
     button.innerText = 'Logout';
 
-    //append the button to nav__buttons
-    document.getElementById('nav__buttons')
+    //append the button to header__buttons
+    document.getElementById('header__buttons')
     .appendChild(button);
 }
 else
