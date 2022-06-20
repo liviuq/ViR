@@ -54,12 +54,11 @@
       <h2>Introducere</h2>
       <p>
         Aplicatia Video Review Manager permite utilizatorilor sa isi exprime opiniile
-        cu ajutorul adnotarilor textuale vizand video-clipurile realizare de un utilizator
-        sau un grup de utilizatori.
+        cu ajutorul adnotarilor textuale.
       </p>
       <p>
         Aceste video-clipuri sunt grupate in diferite categorii, pot fi adaugate in lista
-        utilizatorului de "watch later" si pot primi diferite rating-uri bazate pe
+        utilizatorului de favorite si pot primi diferite rating-uri bazate pe
         numarul de review-uri si de notele aferente.
       </p>
 
@@ -78,7 +77,7 @@
           <li>Organizarea filmelor pe diverse categorii</li>
           <li>Exportarea de statistici textuale(CSV) si grafice(SVG) </li>
           <li>Implementarea fluxului de stiri RSS</li>
-          <li>Adaugarea content-ului preferat in lista de "Favourites"</li>
+          <li>Adaugarea/stergerea content-ului preferat in lista de "Favourites"</li>
           <li>Exportarea acestei liste in format JSON/XML</li>
         </ul>
       </section>
@@ -86,7 +85,7 @@
         <!-- review? -->
         <h3>Mediile de dezvoltare si rulare</h3>
         <p>
-          Aplicatia este dezvoltata folosind HTML + SASS + PHP si unele elemente vor fi in javascript.
+          Aplicatia este dezvoltata folosind HTML + SASS + PHP + D3 si unele elemente vor fi in javascript.
           Se foloseste o metoda de version control, aceea fiind Git.
         </p>
         <p>
@@ -105,26 +104,17 @@
         <!-- review? -->
         <h3>Vizualizarea detaliilor si a review-urilor filmelor</h3>
         <p>
-          Atunci cand uitlizatorul intra pe web site-ul nostru, ii vor fi puse la dispozitie
-          diferite categorii de filme carora le poate vizualiza descrierea( an lansare, actori,
-          buget), comentariile altor utilizatori precum si rating-ul acordat. Fiecare pagina de film
+          Atunci cand utilizatorul intra pe web site-ul nostru, ii vor fi puse la dispozitie
+          diferite categorii de filme carora le poate vizualiza descrierea( directori, actori,
+          writer), comentariile altor utilizatori precum si rating-ul acordat. Fiecare pagina de film
           va fi populata cu banner-ul creatiei, urmat de o lista de adnotari adaugate de alti useri,
           similar cu pagina de video-clip de la Youtube.
         </p>
-      </section>
-      <section id="typing-sections">
-        <!-- review? -->
-        <h3>Cautarea de content</h3>
         <p>
-          Pagina principala contine cel mai vizionat film de la momentul accesarii paginii, impreuna
-          cu multiple sectiuni cu filme din aceeasi categorie: Trending now, Top rated, Action, Comedy, Horror.
-        </p>
-        <p>
-          In cazul de cautare specifica a unui video, se poate folosi bara de search sau, pentru
-          o cautare avansata, se poate apasa pe butonul "lupa" de la bara de search pentru
-          a putea cauta dupa titlu, gen, an.
+          In cazul de cautare specifica a unui video, se poate folosi bara de search.
         </p>
       </section>
+    
       <section id="roles">
         <!-- review? -->
         <h3>Inregistrarea</h3>
@@ -147,12 +137,11 @@
         <h3>Logarea</h3>
         <p>
           Pe aceeasi pagina cu Inregistrarea, utilizatorul se va putea conecta la
-          contul sau prin completarea email-ului si a parolei folosite la inregistrare.
+          contul sau prin completarea numelui de utilizator si a parolei folosite la inregistrare.
         </p>
         <p>
-          In cazul in care email-ul de conectare nu exista in baza de date, utilizatorului
-          ii va fi comunicat acest lucru pentru a se inregistra pe aplicatie sau
-          sa verifice ca datele introduse sunt corecte.
+          In cazul in care numele de utilizator sau parola este gresita, utilizatorului
+          ii va fi comunicat un scurt mesaj despre acest fapt.
         </p>
       </section>
 
@@ -180,7 +169,9 @@
           in categoria de filme preferate a utilizatorului logat. Aceasta lista poate
           fi exportata in format JSON/ XML.
         </p>
-
+        <p>
+          Exista si un buton de a scoate un film de la favorite.
+        </p>
         </section>
         <section id="affiliations">
           <!-- review? -->
@@ -191,12 +182,25 @@
             legatura cu schimbarea clasamentului "Trending now" sau noi comentarii.
           </p>
         </section>
+
+        <section id="transformare-csv">
+          <!-- review? -->
+          <h4>CSV si SVG</h4>
+          <p>
+            Utilizatorul primeste informatii despre toate filmele din baza de date in format CSV si poate vedea un bar char cu cele mai populare filme in SVG.
+          </p>
+        </section>
+
     </section>
 <section id="biblio-references">
   <h2>References</h2>
   <dl>
     <dt id="ref-NYT">JavaScript tutorial</dt>
     <cite property="schema:name"><a href="https://www.youtube.com/watch?v=W6NZfCO5SIk">Youtube tutorial</a></cite>
+    <dt id="ref-NYT">SVG tutorial</dt>
+    <cite property="schema:name"><a href="https://www.youtube.com/watch?v=BDpBAFvdjYo">Youtube tutorial</a></cite>
+    <dt id="ref-NYT">JSON to XML</dt>
+    <cite property="schema:name"><a href="https://www.delftstack.com/howto/javascript/json-to-xml-javascript/">Delft Stack</a></cite> 
  </dl>
 </section>
 </body>
