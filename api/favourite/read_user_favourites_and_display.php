@@ -45,47 +45,47 @@
         }
     }
 
-    //create the Favourite object
+    //create the Card object
     $card = new Card($db);
 
-    //Get favourites
+    //Get cards with display format
     $result = $card->read_user_favourites_and_display($username);
 
     //Getting row count
     $num = $result->rowCount();
 
-    //Check to see if there are any movies
+    //Check to see if there are any cards
     if($num > 0)
     {
-        //there are favourites
+        //there are cards
 
-        //initialize favourite array
-        $favourites_arr = array();
-        $favourites_arr['data'] = array();
+        //initialize card array
+        $cards_arr = array();
+        $cards_arr['data'] = array();
 
         while($row = $result->fetch(PDO::FETCH_ASSOC))
         {
             extract($row);
 
-            $favourite_item = array(
+            $card_item = array(
                 'id' => $id,
                 'banner' => $banner
             );
 
             //Push to "data"
-            array_push($favourites_arr['data'], $favourite_item);
+            array_push($cards_arr['data'], $card_item);
         }
 
         //Turn to JSON & output
         header('HTTP/1.1 200 OK');
-        echo json_encode($favourites_arr);
+        echo json_encode($cards_arr);
     }
     else
     {
         //no favs
         header('HTTP/1.1 204 No Content');
         echo json_encode(array(
-            'message' => 'No movies found'
+            'message' => 'No favourite cards found'
         ));
     }
 

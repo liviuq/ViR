@@ -38,48 +38,15 @@ function parseJWT (token)
 
 document.getElementById("csv__button")
 .addEventListener("click",parseCSV);
-// document.getElementById("svg__button")
-// .addEventListener("click",parseSVG);
+
 document.getElementById("rss__button")
 .addEventListener("click",showRSS);
 
 function parseCSV(){
     //fetch the movie with the passed id 
-    window.location = "https://vira3.herokuapp.com/api/stat/csv.php";   
-    // fetch(`https://vira3.herokuapp.com/api/stat/csv.php`)
-    // .then((res) => res.json())
-    // .then((data) =>
-    // {   
-    //     //start changing values
-    //     let temp_data = data['data'];
-       
-         
-    // });
+    window.location = "https://vira3.herokuapp.com/api/stat/csv.php";
 }
-function parseSVG(){
-    //fetch the movie with the passed id    
-    fetch(`https://vira3.herokuapp.com/api/stat/svg.php`)
-    .then((res) => res.json())
-    .then((data) =>
-    {   
-        //start changing values
-        let temp_data = data['data'];
-        console.log(temp_data);
-        //window.location = "https://vira3.herokuapp.com/test_d3.php";
 
-        
-        // const width=800;
-        // const height=400;
-        // const margin={top: 50, bottom:50, left:50,right:50};
-        
-        // const svg= d3.select('#d3-container')
-        //     .append('svg')
-        //     .attr('height', height-margin.top - margin.bottom)
-        //     .attr('width',width-margin.left - margin.right)
-        //     .attr('viewBox',[0,0,width,height]);
-        
-    });
-}
 function showRSS(){
     window.location = "https://vira3.herokuapp.com/api/rss/rss.php";
 }

@@ -54,8 +54,6 @@
             //Prepare statement
             $stmt = $this->conn->prepare($query);
 
-            //$stmt->debugDumpParams();
-
             //Clean data
             $username = htmlspecialchars(strip_tags($username));
 
