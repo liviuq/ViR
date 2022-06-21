@@ -151,7 +151,7 @@ async function rmFromFav()
         .find(row => row.startsWith('token='))
         ?.split('=')[1];
     const res = await fetch(`https://vira3.herokuapp.com/api/favourite/delete.php?id=${id}`, {
-        method: "POST",
+        method: "DELETE",
         headers: {
             'Accept': 'application/json',
             'Content-type':'application/json',
