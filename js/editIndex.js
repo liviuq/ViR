@@ -83,6 +83,7 @@ function logout()
     //this only sets the cookie exp time to a past time
     document.cookie = "token=old; expires=Sat, 20 Jan 1980 12:00:00 UTC";
     document.location.reload(true);
+    window.location = 'https://vira3.herokuapp.com/index.php';
 }
 
 
