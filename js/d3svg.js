@@ -40,9 +40,16 @@ fetch(`https://vira3.herokuapp.com/api/stat/svg.php`)
                 div3.setAttribute('height', '19');
                 div3.setAttribute('y', j1+i*20);
 
+            var div4 =  document.createElementNS("http://www.w3.org/2000/svg", "text");
+                div4.setAttribute('x', '260');
+                div4.setAttribute('y', j+i*20);
+                div4.setAttribute('dy', '.35em');
+                div4.textContent ='x'+sorted[i].count;
+
                 div.appendChild(div1);
                 div1.appendChild(div2);
                 div1.appendChild(div3);
+                div1.appendChild(div4);
         }
 
         // var div1 = document.createElementNS("http://www.w3.org/2000/svg", "g");
