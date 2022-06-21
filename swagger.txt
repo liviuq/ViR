@@ -1,0 +1,257 @@
+openapi: 3.0.1
+info:
+  title: Video Review Manager
+  description: 'This is the project ViR for the Faculty of Computer Science Iasi. You can find out more about ViR
+    at [https://github.com/liviuq/ViR](https://github.com/liviuq/ViR).'
+  contact:
+    email: petrache.andrei1@gmail.com
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  version: 1.0.0
+tags:
+- name: Authentication
+  description: Authentication engine
+- name: Cards
+  description: Movie click-able banners
+- name: Favourites
+  description: Favourite engine
+- name: Search
+  description: Search bar functionality
+- name: Users
+  description: Operations about user
+- name: Reviews
+  description: Review engine
+- name: Movies
+  description: Movie engine
+paths:
+  /api/authentication/login.php:
+    post:
+      tags:
+      - Authentication
+      summary: Log in to the website, returns a JWT
+      operationId: processRequest
+      responses:
+        401:
+          description: Unauthorized
+          content: {}
+        500:
+          description: Internal Server Error
+          content: {}
+        200:
+          description: OK
+          content: {}
+  /api/card/read.php:
+    get:
+      tags:
+      - Cards
+      summary: Finds all cards
+      operationId: read
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+          content: {}
+  /api/favourite/read_user_favourites_and_display.php:
+    get:
+      tags:
+      - Favourites
+      summary: Finds user favourites in card format
+      operationId: read_user_favourites_and_display
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+          content: {}
+  /api/card/search.php:
+    get:
+      tags:
+      - Search
+      summary: Returns all matching movies in card format
+      operationId: search
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+          content: {}
+  /api/favourite/read_user_favourites.php:
+    get:
+      tags:
+      - Favourites
+      summary: Returns all user's favourite movies in card format
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+          content: {}
+  /api/favourite/create.php:
+    post:
+      tags:
+      - Favourites
+      summary: Creates user's favourite movie
+      operationId: create
+      responses:
+        200:
+          description: OK
+        404:
+          description: Not Found
+          content: {}
+        500:
+          description: Internal Server Error
+          content: {}
+        409:
+          description: Conflict
+          content: {}
+  /api/favourite/delete.php:
+    delete:
+      tags:
+      - Favourites
+      summary: Deletes a favourite
+      operationId: delete
+      responses:
+        200:
+          description: OK
+        404:
+          description: Not Found
+          content: {}
+        500:
+          description: Internal Server Error
+          content: {}
+        400:
+          description: Bad Request
+          content: {}
+        401:
+          description: Unauthorized
+          content: {}
+  /api/user/create.php:
+    post:
+      tags:
+      - Users
+      summary: Creates a user
+      operationId: register
+      responses:
+        200:
+          description: OK
+        500:
+          description: Internal Server Error
+          content: {}
+  /api/review/read_movie_reviews.php:
+    get:
+      tags:
+      - Reviews
+      summary: Returns movie's reviews
+      operationId: read_movie_reviews
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+  /api/review/create.php:
+    post:
+      tags:
+      - Reviews
+      summary: Creates a review on the specified movie
+      responses:
+        200:
+          description: OK
+        500:
+          description: Internal Server Error
+          content: {}
+        404:
+          description: Not Found
+          content: {}
+  /api/movie/read.php:
+    get:
+      tags:
+      - Movies
+      summary: Returns a list with all the movies
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+          content: {}
+  /api/movie/read_single.php:
+    get:
+      tags:
+      - Movies
+      summary: Returns a single movie given the ID
+      operationId: read_single
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+  /api/movie/create.php:
+    post:
+      tags:
+      - Movies
+      summary: Creates a movie
+      responses:
+        200:
+          description: OK
+        500:
+          description: Internal Server Error
+          content: {}
+  /api/movie/update.php:
+    put:
+      tags:
+      - Movies
+      summary: Updates a movie
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content: {}
+  /api/movie/delete.php:
+    delete:
+      tags:
+      - Movies
+      summary: Deletes a movie
+      responses:
+        200:
+          description: OK
+        400:
+          description: Bad Request
+          content: {}
+  /api/stat/csv.php:
+    get:
+      tags:
+      - Stats
+      summary: Returns a CSV with the movies
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+          content: {}
+        500:
+          description: Internal Server Error
+          content: {}
+  /api/stat/svg.php:
+    get:
+      tags:
+      - Stats
+      summary: Returns an SVG with the review chart bar for all movies
+      responses:
+        200:
+          description: OK
+        204:
+          description: No Content
+          content: {}
+        500:
+          description: Internal Server Error
+          content: {}
+  /api/rss/rss.php:
+    get:
+      tags:
+      - RSS
+      summary: RSS Feed
+      responses:
+        200:
+          description: OK

@@ -49,7 +49,7 @@
         //publish a review
         /**
          * @OA\Post(
-         *     path="/api/review/create.php", tags={"Favourites"},
+         *     path="/api/review/create.php", tags={"Reviews"},
          *     summary="Creates a review on the specified movie",
          *     @OA\Response(response="200", description="OK"),
          *     @OA\Response(response="404", description="Not Found"),
