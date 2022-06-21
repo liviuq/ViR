@@ -78,28 +78,31 @@ async function submitReview(e){
     //get review body, rating and cookie JWT
     let body = document.getElementById('text__area').value;
     let rating = document.getElementById('rating__value').value;
-    const cookieValue = document.cookie
+    if(body.length != 0)
+    {
+        const cookieValue = document.cookie
         .split('; ')
         .find(row => row.startsWith('token='))
         ?.split('=')[1];
 
-    //create the POST request
-    const res = await fetch(`https://vira3.herokuapp.com/api/review/create.php?id=${id}`, {
-        method: "POST",
-        headers: {
-            'Accept': 'application/json',
-            'Content-type':'application/json',
-            'Authorization': `Bearer ${cookieValue}`
-            },
-            body:JSON.stringify({body:body, rating:rating})
-        });
-    const reply = await res.json();
-    
-    if(reply.message.localeCompare("Invalid token")==0){
-        alert("You need to be logged in to add to leave a review!")
+        //create the POST request
+        const res = await fetch(`https://vira3.herokuapp.com/api/review/create.php?id=${id}`, {
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                'Content-type':'application/json',
+                'Authorization': `Bearer ${cookieValue}`
+                },
+                body:JSON.stringify({body:body, rating:rating})
+            });
+        const reply = await res.json();
+        
+        if(reply.message.localeCompare("Invalid token")==0){
+            alert("You need to be logged in to add to leave a review!")
+        }
+        document.location.reload(true);
+        //marcu will do this
     }
-    document.location.reload(true);
-    //marcu will do this
 }
 
 document.getElementById('addfav__button')

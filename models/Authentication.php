@@ -41,11 +41,10 @@ class Authentication
     }
 
     //only post the username and password
-    
     /**
      * @OA\Post(
-     *     path="/api/stat/csv.php", tags={"Stats"},
-     *     summary="Returns a CSV with the movies",
+     *     path="/api/authentication/login.php", tags={"Authentication"},
+     *     summary="Authenticate an user",
      *     @OA\Response(response="200", description="OK"),
      *     @OA\Response(response="401", description="Unauthorized"),
      *     @OA\Response(response="500", description="Internal Server Error")
