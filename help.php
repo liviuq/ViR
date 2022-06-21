@@ -22,7 +22,7 @@
                 <br>
                 RSS is a really simple syndication, a newsletter if you will.
                 <br>
-                On a movie page there will be a few options: adding/removin the movie to/from favourites, leaving a review, getting a JSON/XML representation of the movies, but for all of these you will need to be logged in.
+                On a movie page there will be a few options: adding/removing the movie to/from favourites, leaving a review, getting a JSON/XML representation of the movies, but for all of these you will need to be logged in.
             </div>
             <a href="index.php">Go back to the movies</a>
         </div>
