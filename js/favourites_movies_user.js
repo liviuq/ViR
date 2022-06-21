@@ -6,7 +6,7 @@ async function getFavJson(){
 
 
 const res = await fetch(`https://vira3.herokuapp.com/api/favourite/read_user_favourites.php`, {
-    method: "POST",
+    method: "GET",
     headers: {
         'Accept': 'application/json',
         'Content-type':'application/json',
